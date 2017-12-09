@@ -1,0 +1,2657 @@
+<!DOCTYPE html>
+<html data-locale="en-CA" prefix="og: http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+ <head>
+  <!-- https://developers.google.com/tag-manager/devguide?hl=en#adding-data-layer-variables-to-a-page -->
+  <script>
+   dataLayer = [];
+  dataLayer.push({'propertyType': 'house'});dataLayer.push({'propertyCity': 'Vancouver'});dataLayer.push({'propertyNeighbourhood': 'South Vancouver'});dataLayer.push({'propertyPrice': '2088000'});
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-X9BN');
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"0f5fa33b45","applicationID":"993290","transactionName":"JldYQUoKWFRXEBcTQwpIU0dMDFFLHRFQDEY=","queueTime":5,"applicationTime":275,"agent":""}
+  </script>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={xpid:"VgYAUFVaGwoJV1NbBw=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);
+  </script>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="401 E 55th Avenue, Vancouver House for sale (MLS® R2227563). Check out property details, home price, nearby schools and neighbourhood information." name="description"/>
+  <meta content="website" property="og:type"/>
+  <meta content="REW.ca" property="og:site_name"/>
+  <meta content="401 E 55th Avenue, Vancouver, BC, House For Sale" property="og:title"/>
+  <meta content="401 E 55th Avenue, Vancouver House for sale (MLS® R2227563). Check out property details, home price, nearby schools and neighbourhood information." property="og:description"/>
+  <meta content="https://www.rew.ca/properties/R2227563/401-e-55th-avenue-vancouver-bc" property="og:url"/>
+  <meta content="https://d3ljd161w9lywl.cloudfront.net/property/image/R2227563/401-e-55th-avenue-vancouver-bc-4965_262249190-1854909-0_carousel.jpg" property="og:image"/>
+  <link href="https://www.rew.ca/properties/R2227563/401-e-55th-avenue-vancouver-bc" rel="canonical"/>
+  <title>
+   401 E 55th Avenue, Vancouver, BC, House For Sale | REW.ca
+  </title>
+  <!-- For third-generation iPad with high-resolution Retina display: -->
+  <link href="https://d3ljd161w9lywl.cloudfront.net/assets/icons/apple-touch/icon-144x144-precomposed-787b3b95096275304390bafe3c232a22.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+  <!-- For iPhone with high-resolution Retina display: -->
+  <link href="https://d3ljd161w9lywl.cloudfront.net/assets/icons/apple-touch/icon-114x114-precomposed-521bffa0f53e340fb6cffbfdf5b4ad95.png" rel="apple-touch-icon-precomposed" sizes="114x114"/>
+  <!-- For first- and second-generation iPad: -->
+  <link href="https://d3ljd161w9lywl.cloudfront.net/assets/icons/apple-touch/icon-72x72-precomposed-c6162e19433449222f7f5d08bb1f62d8.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link href="https://d3ljd161w9lywl.cloudfront.net/assets/icons/apple-touch/icon-57x57-precomposed-7c5d1b18905fa10e0a7e87541ce7e624.png" rel="apple-touch-icon-precomposed"/>
+  <link href="https://d3ljd161w9lywl.cloudfront.net/assets/vendor-11582884cd5bbc29137dc390baecf70a.css" media="all" rel="stylesheet"/>
+  <link href="https://d3ljd161w9lywl.cloudfront.net/assets/application-6f0f67c3a521855c52f4880cea26e90a.css" media="all" rel="stylesheet"/>
+  <meta content="authenticity_token" name="csrf-param"/>
+  <meta content="MrO9mbGsC7WwZkIs9caQv07X1iLNQTqcYT3ZWUPLeM6d/bO2cn1CXEZ5jNInwNyv5lzCLCqPrwLqI+M8PJI8PQ==" name="csrf-token"/>
+  <!--[if lt IE 9]>
+<script src="https://d3ljd161w9lywl.cloudfront.net/assets/html5shiv-69b34f4da0acc491349a37a5cbc1a922.js"></script>
+<![endif]-->
+  <script>
+   var tcvars = {
+    publication: "REW",
+    site: "REW"
+  };
+  tcvars['section'] = 'rew_Property_Search';
+  
+  
+  // Google Publisher Tags
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+    '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+  
+  googletag.cmd.push(function() {
+    googletag.pubads().setTargeting('publisher', 'REW');
+    googletag.pubads().setTargeting('site', 'REW');
+    googletag.pubads().setTargeting('category', 'rew_Resale_Residential');
+  googletag.pubads().setTargeting('keywords', 'rew_Detached_House');
+  googletag.pubads().setTargeting('keywords', 'over500k');
+  googletag.pubads().setTargeting('is_page', 'rew_Property_Details_Page');
+  googletag.pubads().setTargeting('section', 'rew_Property_Search');
+  googletag.pubads().setTargeting('city', 'Vancouver');
+  googletag.pubads().setTargeting('location', 'South Vancouver');
+  
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+  </script>
+  <script>
+   googletag.cmd.push(function() {
+    googletag.
+      defineSlot('/4326737/cav_REW_REW_rew-sec_rew-subsec_728x90_S1_RON_REW-Network', [], 'gpt-ad-299a8bdf0a').
+      defineSizeMapping(
+        googletag.sizeMapping().
+          addSize([0,0],    [[300, 50], [300, 100]]).
+          addSize([768,0],  [[600, 100], [600, 200], [728, 90]]).
+          addSize([992, 0], [[728, 90], [900, 150], [900, 300]]).
+          build()).
+      addService(googletag.pubads()).
+      setCollapseEmptyDiv(true);
+  });
+  </script>
+ </head>
+ <body class="">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+   &lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-X9BN"
+height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!--[if lt IE 10]>
+<link rel="stylesheet" media="screen" href="https://d3ljd161w9lywl.cloudfront.net/assets/browserupgrade-e757a2ae0e33196b8d6e6a652dad0eb1.css" />
+<div class="browserupgrade">
+<div class="browserupgrade-inner">
+<header class="browserupgrade-header">It appears you're using an unsupported browser</header>
+<div class="browserupgrade-content">
+<div class="browserupgrade-blurb">To access REW, please upgrade to one of the browsers below</div>
+<table>
+<tbody>
+<tr>
+<td>Upgrade Internet Explorer for Free!</td>
+<td class="browserupgrade-link"><a href="http://windows.microsoft.com/ie">Install</a></td>
+</tr>
+<tr>
+<td>Install Google Chrome for Free!</td>
+<td class="browserupgrade-link"><a href="http://www.google.com/chrome">Install</a></td>
+</tr>
+<tr>
+<td>Install Mozilla Firefox for Free!</td>
+<td class="browserupgrade-link"><a href="http://www.firefox.com">Install</a></td>
+</tr>
+<tr>
+<td>Install Safari for Free!</td>
+<td class="browserupgrade-link"><a href="http://www.apple.com/safari">Install</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<![endif]-->
+  <div class="accountnav accountnav--left leftnav offcanvas" data-accountnav="">
+   <header>
+    <button data-dismiss="offcanvas">
+     ×
+    </button>
+   </header>
+   <ul class="banner-nav list-unstyled clearfix">
+    <li class="accountnav-placeholder" data-accountnav-links="">
+    </li>
+    <li class="accountnav-log_in" data-login-link="">
+     <a href="/users/sign_in">
+      Log In
+     </a>
+    </li>
+    <li class="accountnav-sign_up">
+     <a href="/users/sign_up">
+      Sign Up
+     </a>
+    </li>
+   </ul>
+   <ul class="list-unstyled leftnav-items">
+    <li>
+     <a class="is-active" href="/">
+      Homes for Sale
+     </a>
+    </li>
+    <li>
+     <a class="" href="/open-houses">
+      Open Houses
+     </a>
+    </li>
+    <li>
+     <a class="" href="/developments">
+      New Developments
+     </a>
+    </li>
+    <li>
+     <a class="" href="/buildings">
+      Buildings
+     </a>
+    </li>
+    <li>
+     <a class="" href="/agents">
+      Find an Agent
+     </a>
+    </li>
+    <li>
+     <a href="/news">
+      News
+     </a>
+    </li>
+   </ul>
+   <footer>
+    <a class="accountnav-log_out btn btn--charcoal btn-block btn-square" data-method="delete" href="/users/sign_out" rel="nofollow">
+     Sign Out
+    </a>
+   </footer>
+  </div>
+  <nav class="navbar navbar--rew">
+   <div class="navbar-main_nav">
+    <div class="navbar-header">
+     <button class="navbar-toggle navbar-button" data-offcanvas="mainmenu" data-target=".leftnav" type="button">
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+     </button>
+     <a class="navbar-brand" href="/" title="REW.ca">
+      <img alt="Rew logo" src="https://d3ljd161w9lywl.cloudfront.net/assets/logos/rew-logo-0faac2953b6f82ae5c009ca209ae149f.svg"/>
+     </a>
+    </div>
+    <div class="visible-md visible-lg">
+     <ul class="nav navbar-nav navbar--rew-nav">
+      <li>
+       <a class="is-active" href="/">
+        Homes for Sale
+       </a>
+      </li>
+      <li>
+       <a class="" href="/open-houses">
+        Open Houses
+       </a>
+      </li>
+      <li>
+       <a class="" href="/developments">
+        New Developments
+       </a>
+      </li>
+      <li>
+       <a class="" href="/buildings">
+        Buildings
+       </a>
+      </li>
+      <li>
+       <a class="" href="/agents">
+        Find an Agent
+       </a>
+      </li>
+      <li>
+       <a href="/news">
+        News
+       </a>
+      </li>
+     </ul>
+     <ul class="accountnav accountnav--top nav navbar--rew-nav navbar-nav" data-accountnav="">
+      <li class="dropdown accountnav-dropdown">
+       <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <span class="accountnav-name" data-accountnav-name="">
+        </span>
+        <i class="icon-angle-down accountnav-icon">
+        </i>
+       </a>
+       <ul class="dropdown-menu pull-right" role="menu">
+        <li class="accountnav-placeholder" data-accountnav-links="">
+        </li>
+        <li>
+         <a class="accountnav-log_out " data-method="delete" href="/users/sign_out" rel="nofollow">
+          Sign Out
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="accountnav-log_in" data-login-link="">
+       <a href="/users/sign_in">
+        Log In
+       </a>
+      </li>
+      <li class="accountnav-sign_up">
+       <a href="/users/sign_up">
+        Sign Up
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </nav>
+  <div class="modal modal--rew fade registrationform" id="loginForm">
+   <button class="close modal-close" data-dismiss="modal" type="button">
+    ×
+   </button>
+   <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+     <header class="registrationform-header modal-header">
+      <div class="modal-title">
+       Sign Up / Log In
+      </div>
+     </header>
+     <div class="modal-body">
+      <div class="registrationform-tabs" data-title="Sign Up / Log In">
+       <div class="nav nav--tabsrewfaded">
+        <ul class="list-unstyled clearfix">
+         <li class="active">
+          <a data-toggle="tab" href="#sign_up">
+           Sign Up
+          </a>
+         </li>
+         <li>
+          <a data-toggle="tab" href="#login">
+           Log In
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="tab-content">
+        <div class="tab-pane active" id="sign_up">
+         <form accept-charset="UTF-8" action="/users" autocomplete="off" class="simple_form new_user" id="navbar_sign_up" method="post" novalidate="novalidate">
+          <input name="utf8" type="hidden" value="✓"/>
+          <input name="authenticity_token" type="hidden" value="YPIQN4ldCstkj9ASyqNYm364Ta4k0leamqw+jHLeqYOAkcT4+OM4twEHpx3osJVvnloWcYX2fhAI8DnYvdfzMQ=="/>
+          <div class="modal-form">
+           <header>
+            Create a FREE account to save searches and track your favourite homes. Already have an account? Click the Log In tab.
+           </header>
+           <div class="modal-section">
+            <div class="modal-section_input_wrapper">
+             <input aria-required="true" class="string required form-control modal-section_input disappearingplaceholder" data-validation="required" id="user_first_name" label="false" name="user[first_name]" placeholder="Name*" required="required" type="text"/>
+            </div>
+            <div class="modal-section_input_wrapper">
+             <input class="string email optional form-control modal-section_input disappearingplaceholder" data-validation="required email" id="user_email" label="false" name="user[email]" placeholder="Email*" type="email"/>
+            </div>
+            <div class="modal-section_input_wrapper">
+             <input class="password optional form-control modal-section_input disappearingplaceholder" data-validation="required length" data-validation-length="min6" id="user_password" label="false" name="user[password]" placeholder="Password*" type="password"/>
+            </div>
+            <div class="modal-section_input_wrapper">
+             <input class="password optional form-control modal-section_input disappearingplaceholder" data-validation="confirmation" data-validation-confirm="user[password]" data-validation-error-msg-confirmation="does not match password" id="user_password_confirmation" label="false" name="user[password_confirmation]" placeholder="Confirm Password" type="password"/>
+            </div>
+           </div>
+           <div class="checkbox">
+            <label>
+             <input name="user[email_opt_in]" type="hidden" value="0"/>
+             <input id="user_email_opt_in" name="user[email_opt_in]" type="checkbox" value="1"/>
+             Sign up to receive local real estate news and updates (you can unsubscribe at anytime).
+            </label>
+           </div>
+           <input class="btn btn-info btn-square btn-block" name="commit" type="submit" value="Sign Up"/>
+           <footer>
+            By sending this form you agree to
+            <a href="/terms" target="_blank">
+             REW Terms of Use
+            </a>
+            and
+            <a href="/privacy" target="_blank">
+             Privacy Policy
+            </a>
+           </footer>
+           <input autocomplete="form-for-ij4ClvR5wq" class="ij4ClvR5wq" id="ij4ClvR5wq" name="ij4ClvR5wq" type="text"/>
+           <input autocomplete="form-for-email" class="ij4ClvR5wq" id="email" name="email" type="text"/>
+           <input autocomplete="form-for-message" class="ij4ClvR5wq" id="message" name="message" type="text"/>
+           <input data-ij4clvr5wq="true" id="email" name="email" type="text"/>
+          </div>
+         </form>
+        </div>
+        <div class="tab-pane" id="login">
+         <form accept-charset="UTF-8" action="/users/sign_in" class="simple_form new_user" id="navbar_login" method="post" novalidate="novalidate">
+          <input name="utf8" type="hidden" value="✓"/>
+          <input name="authenticity_token" type="hidden" value="mc9WoNzNLGWr8tuGSFoHVFUZT0JPFzJnUUsX9F1rKUF5rIJvrXMeGc56rIlqScqgtfsUne4zG+3DFxCgkmJz8w=="/>
+          <div class="modal-form">
+           <header>
+            <div class="registrationform-errors hide alert alert-danger">
+            </div>
+            Log in to your account to save searches and track your favourite homes. Don't have an account? Click on the Sign Up tab.
+           </header>
+           <div class="modal-section">
+            <div class="modal-section_input_wrapper">
+             <input autofocus="autofocus" class="string email optional form-control modal-section_input" id="user_email" label="false" name="user[email]" placeholder="Email*" type="email"/>
+            </div>
+            <div class="modal-section_input_wrapper">
+             <input class="password optional form-control modal-section_input" id="user_password" label="false" name="user[password]" placeholder="Password*" type="password"/>
+            </div>
+           </div>
+           <div class="checkbox">
+            <label>
+             <input name="user[remember_me]" type="hidden" value="0"/>
+             <input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1"/>
+             Stay logged in
+            </label>
+           </div>
+           <input class="btn btn-info btn-square btn-block" name="commit" type="submit" value="Log In"/>
+           <footer>
+            <a class="registrationform-toggle" data-target="#password" href="#">
+             Can't access your account?
+            </a>
+           </footer>
+          </div>
+         </form>
+        </div>
+       </div>
+      </div>
+      <div class="hide" data-title="Forgot Your Password" id="password">
+       <form accept-charset="UTF-8" action="/users/password" class="simple_form new_user" id="navbar_password" method="post" novalidate="novalidate">
+        <input name="utf8" type="hidden" value="✓"/>
+        <input name="authenticity_token" type="hidden" value="OIHj8X08HctUT0cRUbe4W1p+SLfzL2w93bRyA5RXRZvY4jc+DIIvtzHHMB5zpHWvupwTaFILRbdP6HVXW14fKQ=="/>
+        <div class="modal-form">
+         <header>
+          <div class="registrationform-errors alert alert-danger hide" data-error="email">
+           Email Address not found
+          </div>
+          <div class="registrationform-errors alert alert-danger hide" data-error="state">
+           The user associated to this email address is no longer active. Contact
+           <a href="mailto:support@rew.ca">
+            support@rew.ca
+           </a>
+          </div>
+          <div class="registrationform-success alert alert-success hide">
+           You will receive an email with instructions about how to reset your password in a few minutes.
+          </div>
+          Enter the email address you registered with and your password will be sent to you.
+         </header>
+         <div class="modal-section margin--bxs">
+          <div class="modal-section_input_wrapper">
+           <input autofocus="autofocus" class="string email optional form-control modal-section_input disappearingplaceholder" id="user_email" label="false" name="user[email]" placeholder="Email*" type="email"/>
+          </div>
+         </div>
+         <input class="btn btn-info btn-square btn-block" name="commit" type="submit" value="Send Password"/>
+         <footer>
+          <a class="registrationform-toggle" data-target=".registrationform-tabs" href="#">
+           Back to log in page
+          </a>
+         </footer>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <section class="maincontent" data-input-suggestions-blur-container="">
+   <div class="maincontent-notifications">
+    <section class="container">
+     <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1" data-notifications-bar="">
+      </div>
+     </div>
+    </section>
+   </div>
+   <div class="container">
+    <div class="row breadcrumbbar visible-xs">
+     <div class="col-xs-12">
+      <ul class="breadcrumbs list-unstyled">
+       <li>
+        <a href="/properties/R2227563/401-e-55th-avenue-vancouver-bc">
+         Back to
+Search Results
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="container maincontentspacer" itemscope="" itemtype="http://schema.org/Place">
+    <div class="row breadcrumbbar hidden-xs">
+     <div class="col-sm-8">
+      <ul class="breadcrumbs list-unstyled">
+       <li>
+        <a href="/">
+         Real Estate For Sale
+        </a>
+       </li>
+       <li>
+        401 E 55th Avenue
+       </li>
+      </ul>
+     </div>
+     <div class="hidden-xs col-sm-4 text-right">
+      <form accept-charset="UTF-8" action="/properties/search" class="simple_form searchfield-form" data-remote="true" id="quick_property_search" method="post">
+       <input name="utf8" type="hidden" value="✓"/>
+       <input id="property_search_initial_search_method" name="property_search[initial_search_method]" type="hidden" value="single_field"/>
+       <div class="searchfield searchfield--pagetop has-feedback">
+        <input autocomplete="off" class="string optional form-control searchfield-input" data-search-input="true" id="property_search_query" name="property_search[query]" placeholder="Search (Location, Listing ID, Address)" type="text"/>
+        <div class="hidden inputsuggestions inputsuggestions--pagetop" data-current-location-search="" data-ga-tracking="useLocationPropertiesClick">
+         <div class="inputsuggestions-location visible-xs">
+          <i class="rewicon-location inputsuggestions-icon">
+          </i>
+          Use my Location
+         </div>
+        </div>
+        <input id="autocomplete_type" name="autocomplete[type]" type="hidden"/>
+        <input id="autocomplete_id" name="autocomplete[id]" type="hidden"/>
+        <input id="autocomplete_value" name="autocomplete[value]" type="hidden"/>
+        <button class="searchfield-button form-control-feedback" type="submit">
+         <i class="rewicon-search">
+         </i>
+        </button>
+       </div>
+       <input autocomplete="form-for-ij4ClvR5wq" class="ij4ClvR5wq" id="ij4ClvR5wq" name="ij4ClvR5wq" type="text"/>
+       <input autocomplete="form-for-email" class="ij4ClvR5wq" id="email" name="email" type="text"/>
+       <input autocomplete="form-for-message" class="ij4ClvR5wq" id="message" name="message" type="text"/>
+       <input data-ij4clvr5wq="true" id="email" name="email" type="text"/>
+      </form>
+     </div>
+    </div>
+    <div class="row">
+     <div class="col-xs-12 col-md-8">
+      <div class="propertyheader">
+       <h1 class="propertyheader-title">
+        <span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+         <div class="propertyheader-address">
+          <span itemprop="streetAddress">
+           401 E 55th Avenue
+          </span>
+         </div>
+         <ul class="propertyheader-secondary propertyheader-piped_list">
+          <li>
+           <span itemprop="addressLocality">
+            Vancouver
+           </span>
+           ,
+           <span itemprop="addressRegion">
+            BC
+           </span>
+           ,
+           <span itemprop="postalCode">
+            V5X 3P4
+           </span>
+          </li>
+          <li class="hidden-xs hidden-sm">
+           South Vancouver
+          </li>
+          <li class="hidden-xs hidden-sm">
+           Listing ID:
+R2227563
+          </li>
+         </ul>
+        </span>
+       </h1>
+       <div class="row">
+        <div class="propertyheader-housing_information col-xs-12 col-xs-6">
+        </div>
+       </div>
+       <div class="propertyheader-actions">
+        <div class="row">
+         <div class="col-xs-6 col-sm-8">
+          <div class="propertyheader-price pull-left">
+           $2,088,000
+          </div>
+          <a class="btn btn--icon calculatorlink hidden-xs" data-ga-tracking="mortgageCalculatorClick" data-target="#mortgageModal" data-toggle="modal" href="javascript:void(0)">
+           <img alt="CIBC logo. Banking that fits your life." class="calculatorlink-logo" src="https://d3ljd161w9lywl.cloudfront.net/assets/logos/cibc-logo-2e5657196361a7216849d48088348e10.svg"/>
+           Mortgage Calculator
+          </a>
+         </div>
+         <div class="col-xs-6 col-sm-4 text-right">
+          <a class="btn btn--icon btn--rowicon" data-ga-tracking="mortgageCalculatorIconClick" data-target="#mortgageModal" data-toggle="modal" href="#">
+           <i class="rewicon-calculator">
+           </i>
+          </a>
+          <div class="modal modal--rew modal--cibc fade" id="mortgageModal" tabindex="-1">
+           <div class="modal-dialog">
+            <div class="modal-content">
+             <header class="modal-header">
+              <button aria-label="Close Modal Button." class="close modal-close" data-dismiss="modal" tabindex="1">
+               ×
+              </button>
+              <img alt="CIBC logo. Banking that fits your life." class="modal--cibc-logo" src="https://d3ljd161w9lywl.cloudfront.net/assets/logos/cibc-logo-2e5657196361a7216849d48088348e10.svg"/>
+              Mortgage Calculator
+             </header>
+             <div aria-describedby="cibcStep1" class="modal-content_pane" data-mortgage-calculator="" data-view="calculator" role="alert">
+              <div class="modal-body">
+               <div class="hidden" id="cibcStep1">
+                Your payment amount is listed first. Continue to move down to reach the values to re-calculate the payment amount. Press Esc to close the calculator.
+               </div>
+               <div class="modal-section">
+                <div class="clearfix">
+                 <div class="col-xs-12 col-sm-5 pull-right cibccalc-content_wrapper text-center">
+                  <strong>
+                   Your Payments
+                  </strong>
+                  <div class="cibccalc-payment" data-modal-payment="" tabindex="12">
+                  </div>
+                  <div class="cibccalc-frequency" data-modal-frequency="" tabindex="13">
+                  </div>
+                  <div class="cibccalc-submit_btn">
+                   <button aria-label="Book an appointment to get pre-approved." class="btn btn--cibc btn-square" data-ga-tracking="mortgageCalculatorHoldClick" data-modal-nav="form" tabindex="14">
+                    Get Pre-approved
+                   </button>
+                  </div>
+                 </div>
+                 <form class="col-xs-12 col-sm-7 cibccalc-calc_wrapper">
+                  <div class="row">
+                   <div class="col-xs-12">
+                    <div class="cibccalc-form_control">
+                     <div class="cibccalc-label_wrapper">
+                      <label for="formPurchasePrice">
+                       Purchase Price
+                      </label>
+                      <input class="modal--cibc-editable_input" data-mortgage-purchase-price="" id="formPurchasePrice" tabindex="1"/>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="col-xs-12">
+                    <div class="cibccalc-form_control">
+                     <div class="cibccalc-label_wrapper">
+                      <label for="formDownpayment">
+                       Down payment
+                      </label>
+                      <input class="modal--cibc-editable_input" data-mortgage-downpayment="" id="formDownpayment" tabindex="2"/>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="col-xs-12">
+                    <div class="cibccalc-form_control modal--cibc-readonly_input">
+                     <div class="cibccalc-label_wrapper">
+                      <label for="formMortgage">
+                       Mortgage Amount
+                      </label>
+                      <input data-mortgage-amount="" id="formMortgage" readonly="" tabindex="3"/>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="col-xs-12">
+                    <div class="cibccalc-form_control">
+                     <div class="cibccalc-label_wrapper">
+                      <label for="formAmortization" tabindex="4">
+                       Amortization
+                      </label>
+                      <select class="selectpicker bootstrap-select--transparentbox bootstrap-select--cibc modal--cibc-editable_input hidden" data-mortgage-amortization="" data-width="100%" id="formAmortization" tabindex="5">
+                       <option value="5">
+                        5 Years
+                       </option>
+                       <option value="10">
+                        10 Years
+                       </option>
+                       <option value="15">
+                        15 Years
+                       </option>
+                       <option value="20">
+                        20 Years
+                       </option>
+                       <option selected="" value="25">
+                        25 Years
+                       </option>
+                      </select>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="col-xs-12">
+                    <div class="cibccalc-form_control">
+                     <div class="cibccalc-label_wrapper">
+                      <label for="formFrequency" tabindex="6">
+                       Frequency
+                      </label>
+                      <select class="selectpicker bootstrap-select--transparentbox bootstrap-select--cibc modal--cibc-editable_input hidden" data-mortgage-frequency="" data-width="100%" id="formFrequency" tabindex="7">
+                       <option value="weekly">
+                        Weekly
+                       </option>
+                       <option value="bi_weekly">
+                        Bi-Weekly
+                       </option>
+                       <option selected="" value="monthly">
+                        Monthly
+                       </option>
+                       <option value="semi_monthly">
+                        Semi-Monthly
+                       </option>
+                      </select>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="col-xs-12">
+                    <div class="cibccalc-form_control">
+                     <div class="cibccalc-label_wrapper">
+                      <label for="formTypeTerm" tabindex="8">
+                       Type and Term
+                      </label>
+                      <select class="selectpicker bootstrap-select--transparentbox bootstrap-select--cibc modal--cibc-editable_input hidden" data-mortgage-type-term="" data-width="100%" id="formTypeTerm" tabindex="9">
+                       <option data-rate-id="1_year_fixed">
+                        1 Year Fixed
+                       </option>
+                       <option data-rate-id="2_year_fixed">
+                        2 Year Fixed
+                       </option>
+                       <option data-rate-id="3_year_fixed">
+                        3 Year Fixed
+                       </option>
+                       <option data-rate-id="4_year_fixed">
+                        4 Year Fixed
+                       </option>
+                       <option data-rate-id="5_year_fixed">
+                        5 Year Fixed
+                       </option>
+                       <option data-rate-id="7_year_fixed">
+                        7 Year Fixed
+                       </option>
+                       <option data-rate-id="10_year_fixed">
+                        10 Year Fixed
+                       </option>
+                       <option data-rate-id="3_year_variable">
+                        3 Year Variable
+                       </option>
+                       <option data-rate-id="5_year_variable">
+                        5 Year Variable
+                       </option>
+                      </select>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="col-xs-12">
+                    <div class="cibccalc-form_control">
+                     <div class="cibccalc-label_wrapper">
+                      <label for="formRate">
+                       Interest Rate
+                      </label>
+                      <input class="modal--cibc-editable_input modal--cibc-percentage_input" data-mortgage-rate="" id="formRate" tabindex="10"/>
+                      <div class="form-control-feedback">
+                       %
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="col-xs-12">
+                    <div class="cibccalc-form_control modal--cibc-readonly_input">
+                     <div class="cibccalc-label_wrapper">
+                      <label for="formAPR">
+                       <abbr title="Annual Percentage Rate">
+                        APR
+                       </abbr>
+                      </label>
+                      <sup>
+                       †
+                      </sup>
+                      <input class="modal--cibc-percentage_input" data-mortgage-apr="" id="formAPR" readonly="" tabindex="11"/>
+                      <div class="form-control-feedback">
+                       %
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </form>
+                </div>
+               </div>
+              </div>
+              <footer class="modal-footer text-left">
+               <div class="modal-disclaimer">
+                <p>
+                 <sup>
+                  †
+                 </sup>
+                 APR is calculated based on the interest rate, the mortgage amount, term and amortization provided, assuming a property valuation fee of $250.
+                </p>
+                <p>
+                 The Mortgage Payment Calculator is for illustration purposes only; payment amounts are based on the information you provide. Actual mortgage rates are subject to change at any time without notice. Applicants must meet CIBC’s lending criteria.
+                </p>
+               </div>
+               <div class="modal-disclaimer">
+                <a href="https://www.cibc.com/ca/legal/privacy-priority.html?itrc=C1:2294" tabindex="16" target="_blank">
+                 Privacy Policy
+                </a>
+                |
+                <a data-modal-nav="terms" href="javascript:void(0);" tabindex="17">
+                 Terms and Conditions
+                </a>
+               </div>
+              </footer>
+             </div>
+             <div aria-describedby="cibcStep2" class="modal-content_pane is-hidden" data-view="form" role="alert">
+              <div class="hidden" id="cibcStep2">
+               Mortgage Pre-approval form. Enter your details to book an appointment. Press Esc to close the calculator.
+              </div>
+              <div class="modal-body">
+               <div class="modal-backlink">
+                <a data-modal-nav="calculator" tabindex="16">
+                 <i class="fa fa-chevron-left">
+                 </i>
+                 Back to Calculator
+                </a>
+               </div>
+               <div class="clearfix">
+                <form accept-charset="UTF-8" action="/cibc/lead" autocomplete="off" class="simple_form new_lead" data-modal-submit-form="true" id="new_lead" method="post" novalidate="novalidate">
+                 <input name="utf8" type="hidden" value="✓"/>
+                 <input name="authenticity_token" type="hidden" value="BqAQROMIA+5SXIp99h/3Ks3P7yJbamaLftzsamwa/Z2p7h5rINlKB6RDRIMkGbs6ZUT7LLyk8xX1wtYPE0O5bg=="/>
+                 <input autocomplete="form-for-ij4ClvR5wq" class="ij4ClvR5wq" id="ij4ClvR5wq" name="ij4ClvR5wq" type="text"/>
+                 <input autocomplete="form-for-email" class="ij4ClvR5wq" id="email" name="email" type="text"/>
+                 <input autocomplete="form-for-message" class="ij4ClvR5wq" id="message" name="message" type="text"/>
+                 <input data-ij4clvr5wq="true" id="email" name="email" type="text"/>
+                 <div class="col-xs-12 col-sm-5 cibccalc-details_wrapper">
+                  <div class="cibccalc-payment_details text-center">
+                   <div class="">
+                    <header class="cibccalc-payment_details_header">
+                     Your Payments
+                    </header>
+                    <div class="cibccalc-payment" data-modal-payment="">
+                    </div>
+                    <div class="cibccalc-frequency" data-modal-frequency="">
+                    </div>
+                   </div>
+                  </div>
+                  <div class="cibccalc-loan_details clearfix">
+                   <header class="clearfix collapsed" data-target="#loanDetails" data-toggle="collapse">
+                    <div class="pull-left">
+                     Loan Details
+                    </div>
+                    <div class="cibccalc-loan_details_expand visible-xs">
+                    </div>
+                   </header>
+                   <dl class="l-tabledisplay cibccalc-loan_details_list collapse" id="loanDetails">
+                    <dt>
+                     Interest Rate
+                    </dt>
+                    <dd>
+                     <span data-modal-rate-value="">
+                     </span>
+                     %
+                    </dd>
+                    <dt>
+                     Type and Term
+                    </dt>
+                    <dd>
+                     <span data-modal-rate-term="">
+                     </span>
+                     Year
+                     <span data-modal-rate-type="">
+                     </span>
+                    </dd>
+                    <dt>
+                     Amortization
+                    </dt>
+                    <dd>
+                     <span data-modal-amortization="">
+                     </span>
+                     Years
+                    </dd>
+                    <dt>
+                     Mortgage Amount
+                    </dt>
+                    <dd data-modal-mortgage-amount="">
+                    </dd>
+                    <dt>
+                     Down payment
+                    </dt>
+                    <dd data-modal-downpayment="">
+                    </dd>
+                   </dl>
+                  </div>
+                 </div>
+                 <div class="col-xs-12 col-sm-7 cibccalc-form_wrapper">
+                  <div class="row">
+                   <div class="col-xs-12">
+                    <div class="cibccalc-form_control">
+                     <input aria-required="true" class="string required form-control modal-section_input" data-validation="required" id="lead_first_name" name="lead[first_name]" placeholder="First Name*" required="required" tabindex="17" type="text"/>
+                    </div>
+                   </div>
+                   <div class="col-xs-12">
+                    <div class="cibccalc-form_control">
+                     <input aria-required="true" class="string required form-control modal-section_input" data-validation="required" id="lead_last_name" name="lead[last_name]" placeholder="Last Name*" required="required" tabindex="18" type="text"/>
+                    </div>
+                   </div>
+                   <div class="col-xs-12">
+                    <div class="cibccalc-form_control">
+                     <input class="string email optional form-control modal-section_input" data-validation="required email" id="lead_email" name="lead[email]" placeholder="Email*" tabindex="19" type="email"/>
+                    </div>
+                   </div>
+                   <div class="col-xs-12">
+                    <div class="cibccalc-form_control">
+                     <input class="string tel optional form-control modal-section_input" data-validation="required basic_phone" id="lead_phone" name="lead[phone]" placeholder="Phone*" tabindex="20" type="tel"/>
+                    </div>
+                   </div>
+                   <div class="col-xs-12">
+                    <div class="cibccalc-form_control">
+                     <div class="cibccalc-label_wrapper">
+                      <label for="formPreferred">
+                       Preferred Time*
+                      </label>
+                      <select aria-required="true" class="select required selectpicker bootstrap-select--transparentbox bootstrap-select--cibc hidden" data-validation="required" data-width="100%" id="formPreferred" name="lead[time_to_call]" prompt="Select" required="required" tabindex="21">
+                       <option value="">
+                        Select
+                       </option>
+                       <option value="Morning (9-12)">
+                        Morning (9-12)
+                       </option>
+                       <option value="Afternoon (12-5)">
+                        Afternoon (12-5)
+                       </option>
+                       <option value="Evening (5-8)">
+                        Evening (5-8)
+                       </option>
+                      </select>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="col-xs-12">
+                    <div class="cibccalc-form_control">
+                     <input class="string optional form-control modal-section_input" data-validation="postal_code" id="lead_postal_code" maxlength="7" name="lead[postal_code]" placeholder="Postal Code*" size="7" tabindex="22" type="text"/>
+                    </div>
+                   </div>
+                   <div class="col-xs-12 margin--txs">
+                    <input class="hidden" data-modal-amortization="true" id="lead_amortization" name="lead[amortization]" type="hidden"/>
+                    <input class="hidden" data-modal-downpayment="true" id="lead_downpayment" name="lead[downpayment]" type="hidden"/>
+                    <input class="hidden" data-modal-frequency="true" id="lead_frequency" name="lead[frequency]" type="hidden"/>
+                    <input class="hidden" data-modal-mortgage-amount="true" id="lead_mortgage_amount" name="lead[mortgage_amount]" type="hidden"/>
+                    <input class="hidden" data-modal-payment="true" id="lead_mortgage_payment" name="lead[mortgage_payment]" type="hidden"/>
+                    <input class="hidden" id="lead_property_id" name="lead[property_id]" type="hidden" value="1854909"/>
+                    <input class="hidden" data-modal-purchase-price="true" id="lead_purchase_price" name="lead[purchase_price]" type="hidden"/>
+                    <input class="hidden" data-modal-rate-value="true" id="lead_rate" name="lead[rate]" type="hidden"/>
+                    <input class="hidden" data-modal-rate-term="true" id="lead_term" name="lead[term]" type="hidden"/>
+                    <input class="hidden" data-modal-rate-type="true" id="lead_type" name="lead[type]" type="hidden"/>
+                    <input class="hidden" data-modal-rate-custom="true" id="lead_custom_rate" name="lead[custom_rate]" type="hidden"/>
+                    <input aria-label="Submit your details to book an appointment and hold the Mortgage rate for 120 Days." class="btn btn--cibc btn-square btn-block" tabindex="23" type="submit" value="Hold Mortgage Rate for 120 Days"/>
+                   </div>
+                  </div>
+                 </div>
+                </form>
+               </div>
+              </div>
+              <div class="modal-footer text-left">
+               <div class="modal-disclaimer">
+                <p>
+                 <sup>
+                  †
+                 </sup>
+                 APR is calculated based on the interest rate, the mortgage amount, term and amortization provided, assuming a property valuation fee of $250.
+                </p>
+                <p>
+                 The Mortgage Payment Calculator is for illustration purposes only; payment amounts are based on the information you provide. Actual mortgage rates are subject to change at any time without notice. Applicants must meet CIBC’s lending criteria.
+                </p>
+               </div>
+               <div class="modal-disclaimer">
+                <a href="https://www.cibc.com/ca/legal/privacy-priority.html?itrc=C1:2294" tabindex="25" target="_blank">
+                 Privacy Policy
+                </a>
+                |
+                <a data-modal-nav="terms" href="javascript:void(0);" tabindex="26">
+                 Terms and Conditions
+                </a>
+               </div>
+              </div>
+             </div>
+             <div aria-describedby="cibcStep3" class="modal-content_pane is-hidden" data-view="success" role="alert">
+              <div class="hidden" id="cibcStep3">
+               Appointment request submitted. Thank you. A CIBC Mobile Mortgage Advisor will contact you within two business days. Press Esc to close the calculator.
+              </div>
+              <div class="modal-body">
+               <div class="modal-backlink">
+                <a data-dismiss="modal" href="javascript:void(0);" tabindex="25">
+                 <i class="fa fa-chevron-left">
+                 </i>
+                 Back to Listing
+                </a>
+               </div>
+               <div class="clearfix">
+                <div class="col-xs-12 col-sm-6">
+                 <img alt="Graphic of a CIBC Mobile Mortgage Advisor discussing mortgage options." class="img-responsive l-centered" src="https://d3ljd161w9lywl.cloudfront.net/assets/misc/cibc-penguin-bdd64a94b5233ca108d9e78a085e5d57.png"/>
+                </div>
+                <div class="col-xs-12 col-sm-6 text-center">
+                 <div class="margin--vxs">
+                  <p>
+                   Thanks,
+                   <span data-modal-name-placeholder="">
+                   </span>
+                  </p>
+                  <p>
+                   A CIBC Mobile Mortgage Advisor will contact you within 2 business days to discuss your options.
+                  </p>
+                  <div class="margin--bsm">
+                   <a data-dismiss="modal" href="javascript:void(0);" tabindex="26">
+                    Back to Listing
+                   </a>
+                  </div>
+                  <p>
+                   <a href="https://www.cibc.com/en/personal-banking/mortgages/resource-centre.html" tabindex="27" target="_blank">
+                    Mortgage Resource Centre
+                   </a>
+                  </p>
+                  <p>
+                   <a href="https://www.cibc.com/en/personal-banking/mortgages/mortgage-offers.html" tabindex="28" target="_blank">
+                    Mortgage Offers
+                   </a>
+                  </p>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="modal-content_pane is-hidden" data-view="terms">
+              <div class="modal-body">
+               <div class="modal-backlink">
+                <a data-modal-nav="calculator" href="javascript:void(0)" tabindex="29">
+                 <i class="fa fa-chevron-left">
+                 </i>
+                 Back to Calculator
+                </a>
+               </div>
+               <div class="modal-terms">
+                <header class="margin--bxs">
+                 Terms &amp; Conditions
+                </header>
+                <ul>
+                 <li>
+                  For purchase price $1,000,000 or above, the minimum down payment is 20% of the purchase price.  For purchase price less than $1,000,000, the minimum down payment is based on 5% for the first $500,000 and the remaining is 10% of the purchase price.
+                 </li>
+                 <li>
+                  The Mortgage Payment Calculator is for demonstration purposes only and is not part of the application process. Payment amounts are based on the information you provide and may not be as illustrated. Calculation assumes a fixed mortgage rate. Actual mortgage rates may fluctuate and are subject to change at any time without notice. The maximum amortization for an insured Mortgage is 25 years.
+                 </li>
+                 <li>
+                  APR is calculated based on the interest rate, the mortgage amount, and amortization provided, assuming a property valuation fee of $250.
+                 </li>
+                 <li>
+                  Mortgage Amount indicated does not include Mortgage Insurance.  Mortgage insurance is not available for homes with a purchase price or as-improved value of $1 million or more.
+                 </li>
+                 <li>
+                  Applicants must meet CIBC's lending criteria.
+                 </li>
+                </ul>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <a class="btn btn--icon btn--rowicon hidden-xs" data-target="#emailShareModal" data-toggle="modal" href="javascript:void(0)">
+           <i class="rewicon-share">
+           </i>
+          </a>
+          <a class="btn btn--icon btn--rowicon visible-xs-inline-block" data-target="#shareMenuModal" data-toggle="modal" href="javascript:void(0)">
+           <i class="rewicon-share">
+           </i>
+          </a>
+          <div class="modal modal--rew fade" id="shareMenuModal">
+           <button class="close modal-close" data-dismiss="modal">
+            ×
+           </button>
+           <div class="modal-dialog modal-xs">
+            <div class="modal-content">
+             <div class="modal-header">
+              <div class="modal-title">
+               Share this Property
+              </div>
+             </div>
+             <div class="modal-body">
+              <div class="modal-linkmenu">
+               <a data-target="#emailShareModal" data-toggle="modal" href="javascript:void(0)">
+                Email
+               </a>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="modal modal--rew fade" id="emailShareModal">
+           <button class="close modal-close" data-dismiss="modal">
+            ×
+           </button>
+           <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+             <div class="modal-header">
+              <div class="modal-title">
+               Share this Property
+              </div>
+             </div>
+             <div class="modal-body">
+              <div class="modal-intro">
+               Share 401 E 55th Avenue by email
+              </div>
+              <form accept-charset="UTF-8" action="/email_shares" autocomplete="off" class="simple_form new_email_share" id="new_email_share" method="post" novalidate="novalidate">
+               <input name="utf8" type="hidden" value="✓"/>
+               <input name="authenticity_token" type="hidden" value="SuW0A0qJxcMpKWyhawPuF8cuLMMLC38eHihjQ1If+vrlq7osiViMKt82ol+5BaIHb6U4zezF6oCVNlkmLUa+CQ=="/>
+               <div class="row">
+                <div class="col-xs-12" data-notifications-container="">
+                </div>
+               </div>
+               <div class="clearfix">
+                <div class="modal-section">
+                 <div class="row">
+                  <div class="col-xs-12">
+                   <div class="modal-section_input_wrapper">
+                    <input aria-required="true" class="string required form-control modal-section_input disappearingplaceholder" data-recipient="true" data-validation="required email" id="email_share_recipient" label="false" name="email_share[recipient]" placeholder="Recipient Email Address*" required="required" type="email"/>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="row">
+                  <div class="col-xs-12">
+                   <div class="modal-section_input_wrapper">
+                    <input aria-required="true" class="string email required form-control modal-section_input disappearingplaceholder" data-validation="required email" id="email_share_email" label="false" name="email_share[email]" placeholder="Your Email Address*" required="required" type="email"/>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="row">
+                  <div class="col-xs-12">
+                   <textarea class="text optional form-control modal-section_input verticalresize" id="email_share_message" label="false" name="email_share[message]" rows="4">I found a listing at 401 E 55th Avenue that I wanted to share with you.</textarea>
+                   <input id="email_share_shareable_id" name="email_share[shareable_id]" type="hidden" value="1854909"/>
+                   <input id="email_share_shareable_type" name="email_share[shareable_type]" type="hidden" value="Property"/>
+                  </div>
+                 </div>
+                </div>
+                <div class="row">
+                 <div class="col-xs-12">
+                  <div data-ij4clvr5wq-js="true">
+                  </div>
+                 </div>
+                 <div class="col-xs-12">
+                  <input class="modal-submit btn btn-info btn-square" name="commit" type="submit" value="SEND"/>
+                 </div>
+                 <input autocomplete="form-for-ij4ClvR5wq" class="ij4ClvR5wq" id="ij4ClvR5wq" name="ij4ClvR5wq" type="text"/>
+                 <input autocomplete="form-for-email" class="ij4ClvR5wq" id="email" name="email" type="text"/>
+                 <input autocomplete="form-for-message" class="ij4ClvR5wq" id="message" name="message" type="text"/>
+                 <input data-ij4clvr5wq="true" id="email" name="email" type="text"/>
+                </div>
+               </div>
+              </form>
+             </div>
+            </div>
+           </div>
+          </div>
+          <span class="propertyheader-save_button hidden" data-bookmarkable="" id="bookmark_button_property_1854909">
+           <a class="btn btn-default btn--rowicon btn--icon btn--iconalternate" data-ajax-method="post" data-bookmarkable-id="1854909" data-bookmarkable-type="Property" data-button-id="bookmark_button_property_1854909" data-track-event="bookmarkProperty" href="/bookmarks">
+            <i class="icon-heart">
+            </i>
+           </a>
+          </span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="summarybar summarybar--property">
+       <div class="row">
+        <div class="col-xs-3 summarybar-item">
+         <i class="rewicon-bedroof hidden-xs hidden-sm">
+         </i>
+         <span>
+          <strong class="summarybar-label">
+           6
+          </strong>
+          Bed
+         </span>
+        </div>
+        <div class="col-xs-3 summarybar-item">
+         <i class="rewicon-bathtub hidden-xs hidden-sm">
+         </i>
+         <span>
+          <strong class="summarybar-label">
+           5
+          </strong>
+          Bath
+         </span>
+        </div>
+        <div class="col-xs-3 summarybar-item">
+         <i class="rewicon-size hidden-xs hidden-sm">
+         </i>
+         <span>
+          <strong class="summarybar-label">
+           2537
+          </strong>
+          Sqft
+         </span>
+        </div>
+        <div class="col-xs-3 summarybar-item">
+         <i class="rewicon-info hidden-xs hidden-sm">
+         </i>
+         <span>
+          <strong>
+           House
+          </strong>
+          <div class="summarybar-label hidden-md hidden-lg">
+           Type
+          </div>
+         </span>
+        </div>
+       </div>
+      </div>
+      <section class="locationdisplay clearfix">
+       <div class="locationdisplay-gallery">
+        <div class="photogallery photogallery--nothumbnails">
+         <img alt="401 E 55th Avenue, Vancouver, BC, V5X 3P4" src="https://d3ljd161w9lywl.cloudfront.net/property/image/R2227563/401-e-55th-avenue-vancouver-bc-4965_262249190-1854909-0_lightbox.jpg"/>
+        </div>
+        <div class="locationdisplay-lightboxicon hidden-xs" data-ga-tracking="assetIcon" data-ga-tracking-arguments='["property", "photo"]' data-galleria-lightbox-trigger="">
+         <i class="glyphicon glyphicon-resize-full">
+         </i>
+        </div>
+       </div>
+       <footer>
+        <div class="locationdisplay-actions_wrapper">
+         <a data-ga-tracking="assetIcon" data-ga-tracking-arguments='["property", "map"]' data-target="#mapModal" data-toggle="modal" href="#">
+          <div class="locationdisplay-actions_icon locationdisplay-actions_icon_map">
+           <div class="locationdisplay-actions_title">
+            Map
+           </div>
+          </div>
+         </a>
+        </div>
+       </footer>
+      </section>
+      <div class="modal modal--rew modal--rewheaderless modal--map fade" data-geocodes='[{"lat":"49.2201796","lng":"-123.0974005","title":"401 E 55th Avenue, Vancouver, BC, V5X 3P4","photo":"https://d3ljd161w9lywl.cloudfront.net/property/image/R2227563/401-e-55th-avenue-vancouver-bc-4965_262249190-1854909-0_listings_unbranded.jpg","photo_branded":"https://d3ljd161w9lywl.cloudfront.net/property/image/R2227563/401-e-55th-avenue-vancouver-bc-4965_262249190-1854909-0_listings_branded.jpg","price":"$2,088,000","beds":6,"id":[1854909,"https://d3ljd161w9lywl.cloudfront.net/property/image/R2227563/401-e-55th-avenue-vancouver-bc-4965_262249190-1854909-0_listings_unbranded.jpg","https://d3ljd161w9lywl.cloudfront.net/property/image/R2227563/401-e-55th-avenue-vancouver-bc-4965_262249190-1854909-0_listings_branded.jpg","$2,088,000",6],"bathrooms":5,"floor_area":"2537","address":"401 E 55th Avenue","office":"RE/MAX Real Estate Services","next_openhouse":null,"type":"property","property_type":"house","url":"/properties/R2227563/401-e-55th-avenue-vancouver-bc"}]' id="mapModal">
+       <button class="close modal-close" data-dismiss="modal">
+        ×
+       </button>
+       <div class="modal-dialog modal-lg modal--map-dialog">
+        <div class="modal-content">
+         <div class="modal-body">
+          <div class="map">
+           <div class="col-lg-6 col-md-7 col-sm-6 mapviewcontrols">
+            <ul class="" id="map_view_controls">
+             <li class="active">
+              <a data-mode="roadmap" href="#">
+               Map
+              </a>
+             </li>
+             <li>
+              <a data-mode="satellite" href="#">
+               Satellite
+              </a>
+             </li>
+             <li>
+              <a data-mode="street" href="#">
+               Street
+              </a>
+             </li>
+            </ul>
+           </div>
+           <div class="mapcontrols">
+            <meta content="49.2201796" itemprop="latitude"/>
+            <meta content="-123.0974005" itemprop="longitude"/>
+           </div>
+           <div class="map-map" data-map-container="">
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="row">
+       <div class="col-xs-12">
+       </div>
+      </div>
+      <div id="contactBar">
+       <div class="contactbar">
+        <div class="row">
+         <div class="contactbar-label_wrapper hidden-xs col-sm-6 col-md-5">
+          <div class="contactbar-label">
+           Contact agent
+»
+          </div>
+         </div>
+         <div class="contactbar-actions col-sm-6 col-md-7">
+          <span class="hidden-xs">
+          </span>
+          <span class="hidden-xs">
+           <a class="btn btn--icon" href="http://www.majorolak.com" target="_blank">
+            <i class="icon-globe">
+            </i>
+           </a>
+          </span>
+          <div class="contactbar-contact_buttons_wrapper visible-xs">
+           <a class="btn contactbar-contact_button btn-primary" data-forwarding-agent-id="4767" data-forwarding-agent-mls-num="V22895" data-forwarding-agent-phone="604-263-2823" data-forwarding-property-id="1854909" data-forwarding-property-mls-num="R2227563" data-forwarding-source="listing_page" data-ga-tracking="agentCalled" data-tracking-url="/agents/4767/track_call/Property/1854909?agents%5B%5D=4767&amp;click_element=ph&amp;event_name=log_agent_click&amp;page_code=ldp&amp;widget_code=acb&amp;widget_container_code=l&amp;widget_container_id=1854909" href="tel:604-263-2823">
+            Call Agent
+           </a>
+          </div>
+          <button class="hidden-xs btn btn-primary contactbar-contact_button" data-target="#agentPhoneModal" data-toggle="modal" data-tracking-url="/agents/contact_views/Property/1854909?agents%5B%5D=4767&amp;click_element=ph&amp;event_name=log_agent_click&amp;page_code=ldp&amp;widget_code=acb&amp;widget_container_code=l&amp;widget_container_id=1854909">
+           Call Agent
+          </button>
+          <div class="contactbar-contact_buttons_wrapper">
+           <button class="btn btn-primary contactbar-contact_button" data-target="#agentEmailModal" data-toggle="modal">
+            Email Agent
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <section class="propertydetails">
+       <div class="propertydetails-description">
+        <div class="propertydetails-section_title">
+         Property Description:
+        </div>
+        <div itemprop="description">
+         Custom built home, like new. Located in the popular South Vancouver Sunset area, this 6 bdrms plus den, 5 baths home bright and open layout. Home features: HRV, high ceiling, laminate hardwood flooring on the top floor, living room, dining room and den on the main floor, all granite countertops, tile flooring in kitchen and family room, stainless steel kitchen appliances plus legal suite in the basement and potential suite, 2 car garage and much more. Wlaking distance to Sunset Park and new Community Centre, Main Street and Fraser Street shops and Langara Golf Course. Move in and enjoy. All measurements are approximate and must be verified by the Buyer.
+        </div>
+       </div>
+      </section>
+      <section>
+       <table class="contenttable">
+        <caption>
+         Property Overview
+        </caption>
+        <tbody>
+         <tr>
+          <th>
+           Lot Size
+          </th>
+          <td>
+           33 ft x 112 ft (3700 ft²)
+          </td>
+         </tr>
+         <tr>
+          <th>
+           Property Age
+          </th>
+          <td>
+           Built in 2012 (5 yrs old)
+          </td>
+         </tr>
+         <tr>
+          <th>
+           Gross Taxes for 2017
+          </th>
+          <td>
+           $5,271
+          </td>
+         </tr>
+         <tr>
+          <th>
+           Area
+          </th>
+          <td>
+           Vancouver East
+          </td>
+         </tr>
+         <tr>
+          <th>
+           Sub-Area/Community
+          </th>
+          <td>
+           South Vancouver
+          </td>
+         </tr>
+         <tr>
+          <th>
+           Property Type
+          </th>
+          <td>
+           House
+          </td>
+         </tr>
+         <tr>
+          <th>
+           Title
+          </th>
+          <td>
+           Freehold NonStrata
+          </td>
+         </tr>
+         <tr>
+          <th>
+           Style
+          </th>
+          <td>
+           3 Storey
+          </td>
+         </tr>
+         <tr>
+          <th>
+           Depth
+          </th>
+          <td>
+           112
+          </td>
+         </tr>
+         <tr>
+          <th>
+           Frontage
+          </th>
+          <td>
+           33
+          </td>
+         </tr>
+         <tr>
+          <th>
+           Listing ID
+          </th>
+          <td>
+           R2227563
+          </td>
+         </tr>
+         <tr>
+          <th>
+           Primary Agent
+          </th>
+          <td>
+           <span>
+            Major Olak
+           </span>
+          </td>
+         </tr>
+         <tr>
+          <th>
+           Primary Broker
+          </th>
+          <td>
+           RE/MAX Real Estate Services
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </section>
+      <section>
+       <table class="contenttable contenttable-fit">
+        <caption>
+         Special Features
+        </caption>
+        <tbody>
+         <tr>
+          <th>
+           Features
+          </th>
+          <td>
+           ClthWsh/Dryr/Frdg/Stve/DW, Drapes/Window Coverings, Garage Door Opener, Heat Recov. Vent., Jetted Bathtub, Security System, Smoke Alarm
+          </td>
+         </tr>
+         <tr>
+          <th>
+           Amenities
+          </th>
+          <td>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </section>
+      <section class="margin--blg">
+       <table class="contenttable margin--none">
+        <caption>
+         Nearby Schools
+        </caption>
+       </table>
+       <div class="columnsection">
+        <div class="detailslist" id="nearbySchools">
+         <section>
+          <div class="detailslist-row detailslist-row_highlight">
+           <div class="col-xs-12 col-sm-4">
+            <div class="detailslist-row_title">
+             John Henderson School
+            </div>
+           </div>
+           <div class="col-xs-8 col-sm-6 detailslist-cols">
+            <ul class="list-unstyled clearfix">
+             <li>
+              Public
+             </li>
+             <li>
+              Pre-K, K to 7
+             </li>
+             <li class="detailslist-detail_highlight">
+              In Catchment
+             </li>
+            </ul>
+           </div>
+           <div class="col-xs-4 col-sm-2">
+            <div class="detailslist-row_cap">
+             <a data-popup-map-marker-school='{"name":"John Henderson School","address":"451 53rd Ave E, Vancouver","latitude":49.2227368,"longitude":-123.0950934,"grades":"Pre-K, K - 7","category":"Public"}' href="javascript:void(0)">
+              0.3 km
+              <i class="rewicon-distance">
+              </i>
+             </a>
+            </div>
+           </div>
+          </div>
+          <div class="detailslist-row detailslist-row_highlight">
+           <div class="col-xs-12 col-sm-4">
+            <div class="detailslist-row_title">
+             John Oliver Secondary School
+            </div>
+           </div>
+           <div class="col-xs-8 col-sm-6 detailslist-cols">
+            <ul class="list-unstyled clearfix">
+             <li>
+              Public
+             </li>
+             <li>
+              8 to 12
+             </li>
+             <li class="detailslist-detail_highlight">
+              In Catchment
+             </li>
+            </ul>
+           </div>
+           <div class="col-xs-4 col-sm-2">
+            <div class="detailslist-row_cap">
+             <a data-popup-map-marker-school='{"name":"John Oliver Secondary School","address":"530 41st Ave E, Vancouver","latitude":49.2326978,"longitude":-123.0936271,"grades":"8 - 12","category":"Public"}' href="javascript:void(0)">
+              1.4 km
+              <i class="rewicon-distance">
+              </i>
+             </a>
+            </div>
+           </div>
+          </div>
+          <div class="detailslist-row">
+           <div class="col-xs-12 col-sm-4">
+            <div class="detailslist-row_title">
+             St Andrew's School
+            </div>
+           </div>
+           <div class="col-xs-8 col-sm-6 detailslist-cols">
+            <ul class="list-unstyled clearfix">
+             <li>
+              Independent
+             </li>
+             <li>
+              K to 7
+             </li>
+            </ul>
+           </div>
+           <div class="col-xs-4 col-sm-2">
+            <div class="detailslist-row_cap">
+             <a data-popup-map-marker-school="{&quot;name&quot;:&quot;St Andrew's School&quot;,&quot;address&quot;:&quot;450 47th Ave E, Vancouver&quot;,&quot;latitude&quot;:49.2272136,&quot;longitude&quot;:-123.0958559,&quot;grades&quot;:&quot;K - 7&quot;,&quot;category&quot;:&quot;Independent&quot;}" href="javascript:void(0)">
+              0.8 km
+              <i class="rewicon-distance">
+              </i>
+             </a>
+            </div>
+           </div>
+          </div>
+          <div class="detailslist-row">
+           <div class="col-xs-12 col-sm-4">
+            <div class="detailslist-row_title">
+             L'Ecole Bilingue Elementary
+            </div>
+           </div>
+           <div class="col-xs-8 col-sm-6 detailslist-cols">
+            <ul class="list-unstyled clearfix">
+             <li>
+              Public
+             </li>
+             <li>
+              K to 7
+             </li>
+            </ul>
+           </div>
+           <div class="col-xs-4 col-sm-2">
+            <div class="detailslist-row_cap">
+             <a data-popup-map-marker-school="{&quot;name&quot;:&quot;L'Ecole Bilingue Elementary&quot;,&quot;address&quot;:&quot;5987 Prince Albert St, Vancouver&quot;,&quot;latitude&quot;:49.2297856,&quot;longitude&quot;:-123.0878759,&quot;grades&quot;:&quot;K - 7&quot;,&quot;category&quot;:&quot;Public&quot;}" href="javascript:void(0)">
+              1.3 km
+              <i class="rewicon-distance">
+              </i>
+             </a>
+            </div>
+           </div>
+          </div>
+          <div class="detailslist-row">
+           <div class="col-xs-12 col-sm-4">
+            <div class="detailslist-row_title">
+             Qawsain Knowledge House
+            </div>
+           </div>
+           <div class="col-xs-8 col-sm-6 detailslist-cols">
+            <ul class="list-unstyled clearfix">
+             <li>
+              Independent
+             </li>
+             <li>
+              K to 3
+             </li>
+            </ul>
+           </div>
+           <div class="col-xs-4 col-sm-2">
+            <div class="detailslist-row_cap">
+             <a data-popup-map-marker-school='{"name":"Qawsain Knowledge House","address":"7028 Victoria Dr, Vancouver","latitude":49.219923,"longitude":-123.0656329,"grades":"K - 3","category":"Independent"}' href="javascript:void(0)">
+              2.3 km
+              <i class="rewicon-distance">
+              </i>
+             </a>
+            </div>
+           </div>
+          </div>
+          <div class="detailslist-row">
+           <div class="col-xs-12 col-sm-4">
+            <div class="detailslist-row_title">
+             King David High School
+            </div>
+           </div>
+           <div class="col-xs-8 col-sm-6 detailslist-cols">
+            <ul class="list-unstyled clearfix">
+             <li>
+              Independent
+             </li>
+             <li>
+              8 to 12
+             </li>
+            </ul>
+           </div>
+           <div class="col-xs-4 col-sm-2">
+            <div class="detailslist-row_cap">
+             <a data-popup-map-marker-school='{"name":"King David High School","address":"5718 Willow St, Vancouver","latitude":49.2334558,"longitude":-123.1230754,"grades":"8 - 12","category":"Independent"}' href="javascript:void(0)">
+              2.4 km
+              <i class="rewicon-distance">
+              </i>
+             </a>
+            </div>
+           </div>
+          </div>
+          <div class="detailslist-row">
+           <div class="col-xs-12 col-sm-4">
+            <div class="detailslist-row_title">
+             Corpus Christi School
+            </div>
+           </div>
+           <div class="col-xs-8 col-sm-6 detailslist-cols">
+            <ul class="list-unstyled clearfix">
+             <li>
+              Independent
+             </li>
+             <li>
+              K to 7
+             </li>
+            </ul>
+           </div>
+           <div class="col-xs-4 col-sm-2">
+            <div class="detailslist-row_cap">
+             <a data-popup-map-marker-school='{"name":"Corpus Christi School","address":"6344 Nanaimo St, Vancouver","latitude":49.227045,"longitude":-123.0590751,"grades":"K - 7","category":"Independent"}' href="javascript:void(0)">
+              2.9 km
+              <i class="rewicon-distance">
+              </i>
+             </a>
+            </div>
+           </div>
+          </div>
+          <div class="detailslist-row">
+           <div class="col-xs-12 col-sm-4">
+            <div class="detailslist-row_title">
+             Vancouver Hebrew Academy
+            </div>
+           </div>
+           <div class="col-xs-8 col-sm-6 detailslist-cols">
+            <ul class="list-unstyled clearfix">
+             <li>
+              Independent
+             </li>
+             <li>
+              K to 7
+             </li>
+            </ul>
+           </div>
+           <div class="col-xs-4 col-sm-2">
+            <div class="detailslist-row_cap">
+             <a data-popup-map-marker-school='{"name":"Vancouver Hebrew Academy","address":"1545 62nd Ave W, Vancouver","latitude":49.2154717,"longitude":-123.1413693,"grades":"K - 7","category":"Independent"}' href="javascript:void(0)">
+              3.2 km
+              <i class="rewicon-distance">
+              </i>
+             </a>
+            </div>
+           </div>
+          </div>
+          <div class="detailslist-row">
+           <div class="col-xs-12 col-sm-4">
+            <div class="detailslist-row_title">
+             St Anthony of Padua School
+            </div>
+           </div>
+           <div class="col-xs-8 col-sm-6 detailslist-cols">
+            <ul class="list-unstyled clearfix">
+             <li>
+              Independent
+             </li>
+             <li>
+              K to 7
+             </li>
+            </ul>
+           </div>
+           <div class="col-xs-4 col-sm-2">
+            <div class="detailslist-row_cap">
+             <a data-popup-map-marker-school='{"name":"St Anthony of Padua School","address":"1370 73rd Ave W, Vancouver","latitude":49.2044777,"longitude":-123.1367032,"grades":"K - 7","category":"Independent"}' href="javascript:void(0)">
+              3.4 km
+              <i class="rewicon-distance">
+              </i>
+             </a>
+            </div>
+           </div>
+          </div>
+          <div class="detailslist-row">
+           <div class="col-xs-12 col-sm-4">
+            <div class="detailslist-row_title">
+             Vancouver College
+            </div>
+           </div>
+           <div class="col-xs-8 col-sm-6 detailslist-cols">
+            <ul class="list-unstyled clearfix">
+             <li>
+              Independent
+             </li>
+             <li>
+              K to 12
+             </li>
+            </ul>
+           </div>
+           <div class="col-xs-4 col-sm-2">
+            <div class="detailslist-row_cap">
+             <a data-popup-map-marker-school='{"name":"Vancouver College","address":"5400 Cartier St, Vancouver","latitude":49.2362046,"longitude":-123.1371176,"grades":"K - 12","category":"Independent"}' href="javascript:void(0)">
+              3.4 km
+              <i class="rewicon-distance">
+              </i>
+             </a>
+            </div>
+           </div>
+          </div>
+         </section>
+         <footer data-target="#nearbySchools" data-toggle-class="is-expanded">
+          <a class="detailslist-expander" href="javascript:void(0);">
+           show more
+          </a>
+          <a class="detailslist-collapser" href="javascript:void(0);">
+           show less
+          </a>
+         </footer>
+        </div>
+       </div>
+       <div class="columnsectiondisclaimer">
+        School catchments and distances are intended to be used as reference only. To verify enrolment eligibility for a property, contact the school directly.
+       </div>
+      </section>
+      <section class="hidden-xs hidden-sm margin--blg">
+       <div class="contactbar">
+        <div class="row">
+         <div class="contactbar-label_wrapper hidden-xs col-sm-6 col-md-5">
+          <div class="contactbar-label">
+           Contact agent
+»
+          </div>
+         </div>
+         <div class="contactbar-actions col-sm-6 col-md-7">
+          <span class="hidden-xs">
+          </span>
+          <span class="hidden-xs">
+           <a class="btn btn--icon" href="http://www.majorolak.com" target="_blank">
+            <i class="icon-globe">
+            </i>
+           </a>
+          </span>
+          <div class="contactbar-contact_buttons_wrapper visible-xs">
+           <a class="btn contactbar-contact_button btn-primary" data-forwarding-agent-id="4767" data-forwarding-agent-mls-num="V22895" data-forwarding-agent-phone="604-263-2823" data-forwarding-property-id="1854909" data-forwarding-property-mls-num="R2227563" data-forwarding-source="listing_page" data-ga-tracking="agentCalled" data-tracking-url="/agents/4767/track_call/Property/1854909?agents%5B%5D=4767&amp;click_element=ph&amp;event_name=log_agent_click&amp;page_code=ldp&amp;widget_code=acb&amp;widget_container_code=l&amp;widget_container_id=1854909" href="tel:604-263-2823">
+            Call Agent
+           </a>
+          </div>
+          <button class="hidden-xs btn btn-primary contactbar-contact_button" data-target="#agentPhoneModal" data-toggle="modal" data-tracking-url="/agents/contact_views/Property/1854909?agents%5B%5D=4767&amp;click_element=ph&amp;event_name=log_agent_click&amp;page_code=ldp&amp;widget_code=acb&amp;widget_container_code=l&amp;widget_container_id=1854909">
+           Call Agent
+          </button>
+          <div class="contactbar-contact_buttons_wrapper">
+           <button class="btn btn-primary contactbar-contact_button" data-target="#agentEmailModal" data-toggle="modal">
+            Email Agent
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+      </section>
+      <section class="ratesupermarket hidden-xs hidden-sm" data-list-price="2088000" data-rate-super-market="">
+       <header>
+        <div class="row">
+         <div class="col-md-6">
+          <div class="ratesupermarket-title">
+           Best Mortgage Rates
+          </div>
+         </div>
+         <div class="col-md-6 text-right">
+          <div class="ratesupermarket-muted">
+           Powered by RateSupermarket.ca
+          </div>
+         </div>
+        </div>
+       </header>
+       <section>
+        <div class="row">
+         <div class="col-md-6">
+          <div class="row">
+           <dl class="ratesupermarket-detail">
+            <dt>
+             5-Year Fixed Closed:
+            </dt>
+            <br/>
+            <dd>
+             <span data-rate-super-market-rate-fixed="">
+             </span>
+             %
+            </dd>
+           </dl>
+          </div>
+          <div class="row">
+           <a class="ratesupermarket-button btn btn-primary btn-block" data-ga-tracking="rateSuperMarketClick" data-rate-super-market-link-fixed="" href="#" target="_blank">
+            Get This Rate
+           </a>
+          </div>
+         </div>
+         <div class="col-md-6">
+          <div class="row">
+           <dl class="ratesupermarket-detail">
+            <dt>
+             5-Year Variable Closed:
+            </dt>
+            <br/>
+            <dd>
+             <span data-rate-super-market-rate-variable="">
+             </span>
+             %
+            </dd>
+           </dl>
+          </div>
+          <div class="row">
+           <a class="ratesupermarket-button btn btn-primary btn-block" data-ga-tracking="rateSuperMarketClick" data-rate-super-market-link-variable="" href="#" target="_blank">
+            Get This Rate
+           </a>
+          </div>
+         </div>
+        </div>
+       </section>
+      </section>
+     </div>
+     <div class="col-xs-12 col-md-4">
+     </div>
+    </div>
+    <section>
+     <header class="propertydetails-section_title margin--tsm">
+      Similar Listings in the Area
+     </header>
+     <div class="listingssection">
+      <div class="row">
+       <div class="col-xs-12 col-sm-4 col-md-3">
+        <a class="listingvertical" href="/properties/R2218312/6916-prince-edward-street-vancouver-bc">
+         <div class="clearfix listingvertical-photo_container">
+          <img alt="6916 Prince Edward Street, Vancouver, BC, V5X 3P3" class="img-responsive center-block" itemprop="image" src="https://d3ljd161w9lywl.cloudfront.net/property/image/R2218312/6916-prince-edward-street-vancouver-bc-3223_262239939-1819371-0_lightbox.jpg"/>
+          <div class="listingvertical-banners">
+           <div class="listingvertical-broker">
+            RE/MAX City Realty
+           </div>
+          </div>
+         </div>
+         <div class="listingvertical-body">
+          <div class="listingvertical-title">
+           $1,990,000
+          </div>
+          <div class="listingvertical-content">
+           <ul class="listingvertical-list list-unstyled margin--bnone">
+            <li>
+             6916 Prince Edward Street
+            </li>
+            <li>
+             South Vancouver
+            </li>
+            <li class="margin--txs">
+             <strong>
+              7 Bed
+| 3 Bath
+| 3385 Sqft
+             </strong>
+            </li>
+           </ul>
+          </div>
+         </div>
+        </a>
+       </div>
+       <div class="col-md-3 col-sm-4 col-xs-12 hidden-xs">
+        <a class="listingvertical" href="/properties/R2223488/536-e-55th-avenue-vancouver-bc">
+         <div class="clearfix listingvertical-photo_container">
+          <img alt="536 E 55th Avenue, Vancouver, BC, V5X 1N5" class="img-responsive center-block" itemprop="image" src="https://d3ljd161w9lywl.cloudfront.net/property/image/R2223488/536-e-55th-avenue-vancouver-bc-1836_262245115-1839434-0_lightbox.jpg"/>
+          <div class="listingvertical-banners">
+           <div class="listingvertical-broker">
+            RE/MAX City Realty
+           </div>
+           <div class="listingvertical-openhouses">
+            <span>
+             Open
+            </span>
+            Dec 10,  2:00 PM -  4:00 PM
+           </div>
+          </div>
+         </div>
+         <div class="listingvertical-body">
+          <div class="listingvertical-title">
+           $2,268,000
+          </div>
+          <div class="listingvertical-content">
+           <ul class="listingvertical-list list-unstyled margin--bnone">
+            <li>
+             536 E 55th Avenue
+            </li>
+            <li>
+             South Vancouver
+            </li>
+            <li class="margin--txs">
+             <strong>
+              9 Bed
+| 8 Bath
+| 3228 Sqft
+             </strong>
+            </li>
+           </ul>
+          </div>
+         </div>
+        </a>
+       </div>
+       <div class="col-md-3 col-sm-4 col-xs-12 hidden-xs">
+        <a class="listingvertical" href="/properties/R2227146/536-e-56th-avenue-vancouver-bc">
+         <div class="clearfix listingvertical-photo_container">
+          <img alt="536 E 56th Avenue, Vancouver, BC, V5X 1R7" class="img-responsive center-block" itemprop="image" src="https://d3ljd161w9lywl.cloudfront.net/property/image/R2227146/536-e-56th-avenue-vancouver-bc-3765_262248773-1853105-0_lightbox.jpg"/>
+          <div class="listingvertical-banners">
+           <div class="listingvertical-broker">
+            RE/MAX City Realty
+           </div>
+          </div>
+         </div>
+         <div class="listingvertical-body">
+          <div class="listingvertical-title">
+           $2,098,000
+          </div>
+          <div class="listingvertical-content">
+           <ul class="listingvertical-list list-unstyled margin--bnone">
+            <li>
+             536 E 56th Avenue
+            </li>
+            <li>
+             South Vancouver
+            </li>
+            <li class="margin--txs">
+             <strong>
+              6 Bed
+| 5 Bath
+| 2680 Sqft
+             </strong>
+            </li>
+           </ul>
+          </div>
+         </div>
+        </a>
+       </div>
+       <div class="col-md-3 col-sm-4 col-xs-12 hidden-sm hidden-xs">
+        <a class="listingvertical" href="/properties/R2209944/335-e-58th-avenue-vancouver-bc">
+         <div class="clearfix listingvertical-photo_container">
+          <img alt="335 E 58th Avenue, Vancouver, BC, V5X 1V8" class="img-responsive center-block" itemprop="image" src="https://d3ljd161w9lywl.cloudfront.net/property/image/R2209944/335-e-58th-avenue-vancouver-bc-8625_262231571-1786923-0_lightbox.jpg"/>
+          <div class="listingvertical-banners">
+           <div class="listingvertical-broker">
+            Royal Pacific Rlty. (Kingsway)
+           </div>
+          </div>
+         </div>
+         <div class="listingvertical-body">
+          <div class="listingvertical-title">
+           $1,498,000
+          </div>
+          <div class="listingvertical-content">
+           <ul class="listingvertical-list list-unstyled margin--bnone">
+            <li>
+             335 E 58th Avenue
+            </li>
+            <li>
+             South Vancouver
+            </li>
+            <li class="margin--txs">
+             <strong>
+              6 Bed
+| 2 Bath
+| 2246 Sqft
+             </strong>
+            </li>
+           </ul>
+          </div>
+         </div>
+        </a>
+       </div>
+      </div>
+     </div>
+    </section>
+    <div class="row">
+     <div class="col-xs-12">
+      <div class="ad">
+       <div class="ad-inner">
+        <section class="text-center" id="gpt-ad-299a8bdf0a">
+         <script>
+          googletag.cmd.push(function() { googletag.display("gpt-ad-299a8bdf0a"); });
+         </script>
+        </section>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="pageblock pageblock--content backgroundfill backgroundfill--color-graylight">
+    <div class="container">
+     <div class="row">
+      <div class="col-xs-12">
+       <div class="backgroundfill backgroundfill--color-offwhite mlswrapper">
+        <div class="media media--disclaimer">
+         <div class="media--noborder">
+          <div class="media-image">
+           <img alt="MLS Reciprocity Logo" src="https://d3ljd161w9lywl.cloudfront.net/assets/reb_logo_property-450fdaac4b444220dbe9ec4da26e0d88.png"/>
+          </div>
+         </div>
+         <div class="media-body">
+          This representation is based in whole or in part on data generated by the Chilliwack &amp; District Real Estate Board, Fraser Valley Real Estate Board or Real Estate Board of Greater Vancouver which assumes no responsibility for its accuracy.
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="modal modal--rew fade" id="agentEmailModal">
+    <button class="close modal-close" data-dismiss="modal">
+     ×
+    </button>
+    <div class="modal-dialog modal-sm">
+     <div class="modal-content">
+      <div class="modal-header">
+       <div class="modal-title">
+        Email Agent
+       </div>
+      </div>
+      <div class="modal-body">
+       <form accept-charset="UTF-8" action="/group_lead" autocomplete="off" class="simple_form contactform-sender" id="new_lead" method="post" novalidate="novalidate">
+        <input name="utf8" type="hidden" value="✓"/>
+        <input name="authenticity_token" type="hidden" value="CKCf5m0oOhWvkB0QeieZFuQ2EJ6mrQgIKfZgZVenDden7pHJrvlz/FmP0+6oIdUGTL0EkEFjnZai6FoAKP5JJA=="/>
+        <div class="modal-section">
+         <div class="modal-section_input_wrapper">
+          <input aria-required="true" class="string required form-control modal-section_input disappearingplaceholder" data-validation="required" id="lead_name" name="lead[name]" placeholder="Enter your name*" required="required" type="text"/>
+         </div>
+         <div class="modal-section_input_wrapper">
+          <input aria-required="true" class="string email required form-control modal-section_input disappearingplaceholder" data-validation="required email" id="lead_email" name="lead[email]" placeholder="Enter your email*" required="required" type="email"/>
+         </div>
+         <div class="modal-section_input_wrapper">
+          <input aria-required="true" class="string tel required form-control modal-section_input disappearingplaceholder" data-validation="required basic_phone" id="lead_phone" name="lead[phone]" placeholder="Enter your phone*" required="required" type="tel"/>
+         </div>
+         <div class="modal-section_input_wrapper">
+          <textarea class="text optional form-control modal-section_input" id="lead_message" name="lead[message]" placeholder="Enter your message" rows="6">Hi, I found your listing on REW.ca. Please send me more information about 401 E 55th Avenue, Vancouver, BC, V5X 3P4. Thank you</textarea>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-xs-12">
+          <div data-ij4clvr5wq-js="true">
+          </div>
+         </div>
+         <div class="col-xs-12">
+          <button class="btn btn-info btn-square btn-block">
+           Send Message
+          </button>
+         </div>
+        </div>
+        <input id="lead_property_id" name="lead[property_id]" type="hidden" value="1854909"/>
+        <input name="agent_ids[]" type="hidden" value="4767"/>
+        <input autocomplete="form-for-ij4ClvR5wq" class="ij4ClvR5wq" id="ij4ClvR5wq" name="ij4ClvR5wq" type="text"/>
+        <input autocomplete="form-for-email" class="ij4ClvR5wq" id="email" name="email" type="text"/>
+        <input autocomplete="form-for-message" class="ij4ClvR5wq" id="message" name="message" type="text"/>
+        <input data-ij4clvr5wq="true" id="email" name="email" type="text"/>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="modal modal--rew fade" data-track-agent-phone-contact="" id="agentPhoneModal">
+    <button class="close modal-close" data-dismiss="modal">
+     ×
+    </button>
+    <div class="modal-dialog modal-sm">
+     <div class="modal-content">
+      <div class="modal-header">
+       <div class="modal-title">
+        Call Agent
+       </div>
+      </div>
+      <div class="modal-body">
+       <div class="agentphones">
+        <div class="agentphones-details">
+         <span class="agentphones-details_name">
+          Call
+Major  Olak
+         </span>
+        </div>
+        <dl class="contact-phonenumbers">
+         <dt>
+          Phone:
+         </dt>
+         <dd itemprop="telephone">
+          <a data-ga-tracking="agentCalled" data-tracking-url="/agents/4767/track_call/Property/1854909?business_entity_id=4767&amp;click_element=pn&amp;event_name=log_agent_click&amp;page_code=ldp&amp;widget_code=pnc&amp;widget_container_code=l&amp;widget_container_id=1854909" href="tel:604-263-2823">
+           604-263-2823
+          </a>
+         </dd>
+         <dt>
+          Office:
+         </dt>
+         <dd>
+          <a data-ga-tracking="agentCalled" data-tracking-url="/agents/4767/track_call/Property/1854909?business_entity_id=4767&amp;click_element=pn&amp;event_name=log_agent_click&amp;page_code=ldp&amp;widget_code=pnc&amp;widget_container_code=l&amp;widget_container_id=1854909" href="tel:604-263-2823">
+           604-263-2823
+          </a>
+         </dd>
+         <dt>
+          Fax:
+         </dt>
+         <dd>
+          <a data-ga-tracking="agentCalled" data-tracking-url="/agents/4767/track_call/Property/1854909?business_entity_id=4767&amp;click_element=pn&amp;event_name=log_agent_click&amp;page_code=ldp&amp;widget_code=pnc&amp;widget_container_code=l&amp;widget_container_id=1854909" href="tel:604-263-1057">
+           604-263-1057
+          </a>
+         </dd>
+        </dl>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <section class="pageblock pageblock--content backgroundfill backgroundfill--color-charcoal hidden-xs">
+    <div class="container">
+     <div class="row">
+      <div class="col-sm-6 col-md-4">
+       <a class="quicklink" href="http://www.westcoastcondominium.ca" target="_blank">
+        <div class="quicklink-icon">
+         <i class="icon-homepageblock-housenew">
+         </i>
+        </div>
+        <div class="quicklink-caption">
+         <div class="quicklink-tag">
+          View Our
+         </div>
+         <div class="quicklink-title">
+          West Coast
+         </div>
+         <div class="quicklink-subtitle">
+          Condominium Magazine
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+       <a class="quicklink" href="/open-houses">
+        <div class="quicklink-divider">
+        </div>
+        <div class="quicklink-icon">
+         <i class="icon-homepageblock-housepin">
+         </i>
+        </div>
+        <div class="quicklink-caption">
+         <div class="quicklink-tag">
+          View All
+         </div>
+         <div class="quicklink-title">
+          Open Houses
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="col-md-4 hidden-sm">
+       <a class="quicklink" href="https://issuu.com/rew1/docs" target="_blank">
+        <div class="quicklink-divider">
+        </div>
+        <div class="quicklink-icon">
+         <i class="icon-homepageblock-page-orange">
+         </i>
+        </div>
+        <div class="quicklink-caption">
+         <div class="quicklink-tag">
+          View Our
+         </div>
+         <div class="quicklink-title">
+          Print Editions
+         </div>
+        </div>
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="divider--icon hidden-xs hidden-sm">
+    <div class="divider--icon-chevron">
+    </div>
+   </div>
+   <div id="fb-root">
+   </div>
+  </section>
+  <footer>
+   <div class="pageblock pageblock--content backgroundfill backgroundfill--color-offwhite container visible-md visible-lg">
+    <div class="footerpagecaplist">
+     <h2 class="footerpagecaplist-title">
+      Browse Real Estate
+     </h2>
+     <div class="row">
+      <div class="col-xs-3">
+       <div class="footerpagecaplist-inner">
+        <h3 class="footerpagecaplist-subtitle">
+         Explore By City
+        </h3>
+        <ul class="list-unstyled footerpagecaplist-list">
+         <li>
+          <a href="/properties/areas/toronto-on">
+           Toronto
+          </a>
+         </li>
+         <li>
+          <a href="/properties/areas/brampton-on">
+           Brampton
+          </a>
+         </li>
+         <li>
+          <a href="/properties/areas/mississauga-on">
+           Mississauga
+          </a>
+         </li>
+         <li>
+          <a href="/properties/areas/vancouver-bc">
+           Vancouver
+          </a>
+         </li>
+         <li>
+          <a href="/properties/areas/victoria-bc">
+           Victoria
+          </a>
+         </li>
+         <li>
+          <a href="/properties/areas/surrey-bc">
+           Surrey
+          </a>
+         </li>
+        </ul>
+        <a href="/sitemap/real-estate">
+         View More
+        </a>
+       </div>
+      </div>
+      <div class="footerpagecaplist col-xs-3">
+       <div class="footerpagecaplist-inner">
+        <h3 class="footerpagecaplist-subtitle">
+         Explore By Neighbourhood
+        </h3>
+        <ul class="list-unstyled footerpagecaplist-list">
+         <li>
+          <a href="/properties/areas/waterfront-communities-west-toronto-on">
+           Waterfront Communities West
+          </a>
+         </li>
+         <li>
+          <a href="/properties/areas/willowdale-east-toronto-on">
+           Willowdale East
+          </a>
+         </li>
+         <li>
+          <a href="/properties/areas/collingwood-vancouver-bc">
+           Collingwood
+          </a>
+         </li>
+         <li>
+          <a href="/properties/areas/kitsilano-vancouver-bc">
+           Kitsilano
+          </a>
+         </li>
+         <li>
+          <a href="/properties/areas/downtown-victoria-bc">
+           Downtown
+          </a>
+         </li>
+         <li>
+          <a href="/properties/areas/north-nanaimo-bc">
+           North Nanaimo
+          </a>
+         </li>
+        </ul>
+        <a href="/sitemap/real-estate">
+         View More
+        </a>
+       </div>
+      </div>
+      <div class="footerpagecaplist col-xs-3">
+       <div class="footerpagecaplist-inner">
+        <h3 class="footerpagecaplist-subtitle">
+         Find A Local Real Estate Agent
+        </h3>
+        <ul class="list-unstyled footerpagecaplist-list">
+         <li>
+          <a href="/agents/areas/burnaby-bc">
+           Burnaby
+          </a>
+         </li>
+         <li>
+          <a href="/agents/areas/coquitlam-bc">
+           Coquitlam
+          </a>
+         </li>
+         <li>
+          <a href="/agents/areas/langley-bc">
+           Langley
+          </a>
+         </li>
+         <li>
+          <a href="/agents/areas/north-vancouver-bc">
+           North Vancouver
+          </a>
+         </li>
+         <li>
+          <a href="/agents/areas/richmond-bc">
+           Richmond
+          </a>
+         </li>
+         <li>
+          <a href="/agents/areas/surrey-bc">
+           Surrey
+          </a>
+         </li>
+         <li>
+          <a href="/agents/areas/vancouver-bc">
+           Vancouver
+          </a>
+         </li>
+        </ul>
+        <a href="/sitemap/agents">
+         View More
+        </a>
+       </div>
+      </div>
+      <div class="footerpagecaplist col-xs-3">
+       <div class="footerpagecaplist-inner">
+        <h3 class="footerpagecaplist-subtitle">
+         Discover New Developments
+        </h3>
+        <ul class="list-unstyled footerpagecaplist-list">
+         <li>
+          <a href="/developments/3225">
+           567 Clarke + Como, Coquitlam
+          </a>
+         </li>
+         <li>
+          <a href="/developments/3250">
+           Banting Square, New Tecumseth
+          </a>
+         </li>
+         <li>
+          <a href="/developments/3269">
+           King George Hub, Surrey
+          </a>
+         </li>
+         <li>
+          <a href="/developments/3249">
+           King George School Lofts &amp; Townhomes, Newmarket
+          </a>
+         </li>
+         <li>
+          <a href="/developments/3246">
+           Minto Yorkville Park, Toronto
+          </a>
+         </li>
+         <li>
+          <a href="/developments/3232">
+           Walden, Langley
+          </a>
+         </li>
+        </ul>
+        <a href="/sitemap/developments">
+         View More
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="pageblock pageblock--footer backgroundfill backgroundfill--color-offwhite footerlinks">
+    <div class="container">
+     <div class="footerlinks-inner">
+      <div class="footerlinks-social">
+       <ul class="list-unstyled">
+        <li>
+         <a class="socialicon" data-dnt="true" data-lang="en-CA" data-show-count="false" data-show-screen-name="false" href="https://twitter.com/intent/follow?&amp;screen_name=REWca" target="_blank">
+          <i class="icon-twitter">
+          </i>
+         </a>
+        </li>
+        <li>
+         <a class="socialicon" href="http://www.facebook.com/REW.ca" target="_blank">
+          <i class="icon-facebook">
+          </i>
+         </a>
+        </li>
+        <li>
+         <a class="socialicon" href="https://plus.google.com/118105016557980395484" rel="publisher" target="_blank">
+          <i class="icon-google-plus">
+          </i>
+         </a>
+        </li>
+        <li>
+         <a class="socialicon" href="http://www.youtube.com/user/REWdotca" target="_blank">
+          <i class="icon-youtube">
+          </i>
+         </a>
+        </li>
+        <li>
+         <a class="socialicon" href="http://pinterest.com/rewca/" target="_blank">
+          <i class="icon-pinterest">
+          </i>
+         </a>
+        </li>
+        <li>
+         <a class="socialicon" href="http://www.linkedin.com/company/rew-ca" target="_blank">
+          <i class="icon-linkedin">
+          </i>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footerlinks-nav">
+       <a href="/contact-us">
+        Contact Us
+       </a>
+       <a class="hidden-xs" href="/about-us">
+        About Us
+       </a>
+       <a class="hidden-xs" href="https://issuu.com/rew1/docs" target="_blank">
+        Print Editions
+       </a>
+       <a href="/advertise">
+        Advertise with Us
+       </a>
+       <a class="hidden-xs" href="/careers">
+        Careers
+       </a>
+       <a href="/sitemap">
+        Sitemap
+       </a>
+       <a class="hidden-xs" href="/dashboard/agents">
+        Agent Log In
+       </a>
+      </div>
+     </div>
+     <div class="row">
+      <div class="col-xs-12">
+       <div class="footernav text-center">
+        © 2017 REW.ca. A Division of
+        <a href="http://www.glaciermedia.ca">
+         Glacier Media
+        </a>
+        . All rights reserved.
+        <a href="/privacy">
+         Privacy
+        </a>
+        and
+        <a href="/terms">
+         Terms
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="pageblock pageblock--footer backgroundfill backgroundfill--color-offwhite visible-md visible-lg">
+    <div class="container">
+     <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+       <div class="footerblurb">
+        <p>
+         Start Your Real Estate Search with REW.ca
+        </p>
+        <p>
+         REW.ca is your best tool for real estate search. You'll find both
+         <a href="/sitemap/real-estate">
+          MLS® homes
+         </a>
+         and
+         <a href="/developments">
+          new developments
+         </a>
+         for sale. MLS® listing search
+covers the real estate boards of Greater Toronto, Greater Vancouver, the Fraser Valley, Chilliwack, Vancouver Island, and Whistler.
+Sign up for
+         <a href="/users/sign_up">
+          free property alerts
+         </a>
+         and read latest
+         <a href="/news">
+          real estate news
+         </a>
+         .
+        </p>
+        <p>
+         The trademarks MLS®, Multiple Listing Service® and the associated logos are owned by CREA and identify the quality of services provided by real estate professionals who are members of CREA.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script src="https://d3ljd161w9lywl.cloudfront.net/assets/vendor-6163d69bd3aa6cb0bec0ea138288e4f4.js">
+  </script>
+  <script src="https://d3ljd161w9lywl.cloudfront.net/assets/application-455fba61610fb2a8e8f72242935b3c7c.js">
+  </script>
+  <script>
+   $(function(){
+    new REW.InputSuggestions({input: '#property_search_query', suggestions: '[data-current-location-search]'});
+  
+    new REW.CurrentLocationSearch('[data-current-location-search]', {
+      errorMessages: {"denied":"To allow location search, enable location services in your settings, and clear your browser history.","title":"Use My Location","unavailable":"Unable to acquire current location.","unknown":"An error occurred trying to obtain your location. Please try again later.","unsupported":"Your current location is unsupported."},
+      geographiesUrl: '//api.rew.ca/v1/geographies',
+      geographyType:  'neighborhood',
+      inputSelector: '[data-search-input]'
+    });
+  });
+  </script>
+  <script>
+   $(function(){
+  
+    new REW.GroupedAutocomplete('#property_search_query',{
+      source: '/properties/autocomplete',
+      labels: {"address":"Addresses","agent":"Agents","building":"Buildings","developer":"Developers","newItem":"New","place":"Places","school":"Schools"}
+    });
+  
+    new REW.SearchHandler('#quick_property_search');
+  });
+  </script>
+  <script src="https://d3ljd161w9lywl.cloudfront.net/assets/cibc-eb3af1b01b7523fb02b66da6f6f5733f.js">
+  </script>
+  <script>
+   $(function(){
+    $('.selectpicker').removeClass('hidden').selectpicker();
+  
+    var form = new Cibc.CalculatorForm('[data-mortgage-calculator]', {
+      purchasePrice: 2088000,
+      ratesUrl: '/mortgage/rates'
+    })
+  
+    new Cibc.Modal('#mortgageModal', form, {
+      errorClass: 'cibccalc-error',
+      onSuccess: function(){
+        REW.Tracking.mortgageRateRequest();
+      }
+    });
+  });
+  </script>
+  <script>
+   $(function(){
+    new REW.ContactForm('#emailShareModal form', {
+      successHolder: '[data-notifications-container]',
+      errorHolder: '[data-notifications-container]',
+      successEvent: 'shareByEmail',
+      onSuccess: function(){
+        $('[data-recipient]').val(null);
+      }
+    });
+  });
+  </script>
+  <script defer="defer" type="text/javascript">
+   $(function(){
+  // TODO Wait until Cloudinary responsive images are loaded (stage size is calculated with this)
+  new REW.GalleriaWrapper('.photogallery', {
+    debug: false,
+    lightbox: true,
+    height: 383/735.0,
+    showInfo: false,
+    imageCrop: 'landscape',
+    thumbnails: false,
+    maxScaleRatio: 1,
+    showCounter:false
+  });
+});
+  </script>
+  <script>
+   $(function(){
+    var controller = new REW.Maps.ModalDeferredController('#mapModal');
+    $("#mapModal").one('shown.bs.modal', function(e){
+      new REW.Maps.Deferred(
+        '#mapModal',
+        REW.Maps.Property,
+        $.extend({}, {"sprites":{"property":{"width":22,"height":31,"scaledWidth":158,"scaledHeight":265,"url":"https://d3ljd161w9lywl.cloudfront.net/assets/misc/property-type-pins-fef1d8d0e8ffb7bc4c2560bfed5dfada.png","x":0,"y":0,"hOffset":27,"vOffset":39,"icons":["house","townhouse","multifamily","condo","land","lot","other"],"iconStates":["normal","active","visited","normal_open","active_open","visited_open"]},"landmarks":{"width":47,"height":47,"scaledWidth":101,"scaledHeight":94,"url":"https://d3ljd161w9lywl.cloudfront.net/assets/misc/landmark-pins-01e8c1ef65b5e431b0bd0757e8b9a648.png","x":2,"y":0,"hOffset":46,"vOffset":46,"anchor":{"x":23,"y":23},"icons":["school","transit"],"iconStates":["normal","active"]}},"labels":{"beds":"Beds","bathrooms":"Baths","square_feet":"Sqft"}}, {
+          viewControls: '#map_view_controls',
+          onReady: controller.mapReady
+        })
+      );
+    });
+  
+    $("[data-target='#mapModal']").click(function(){
+      controller.clearMarkers();
+    });
+  });
+  </script>
+  <script>
+   $(function(){
+    $('[data-popup-map-marker-school]').click(function(){
+      var controller = $('#mapModal').data('mapController');
+      var $button = $(this);
+      var school = $button.data('popup-map-marker-school');
+      $.extend(school, {
+        sprite: 'landmarks',
+        type: 'school',
+        infoBubbleStyle: 'landmark'
+      });
+      controller.setMarkers([school]);
+      controller.show();
+    });
+  
+    new REW.ToggleClass('[data-toggle-class]');
+  });
+  </script>
+  <script>
+   $(function(){
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.type = 'text/javascript';
+      js.async = true;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1280103245373652";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  });
+  </script>
+  <script>
+   $(function(){
+    REW.bookmarks = {
+      'Property': []
+    };
+    new REW.ListingLinkUpdater({});
+    new REW.BookmarkButtonUpdater({
+      bookmarks: REW.bookmarks['Property'],
+      showButtons: true
+    });
+    if(true) {
+      new REW.ClickTracker('#bookmark_button_property_1854909', '[data-bookmarkable-id]')
+  
+      $('[data-bookmarkable]').each(function(i, el){
+        new REW.BookmarkHandler(el);
+      });
+    }
+    new REW.ClickTracker('#virtualTour')
+  
+    new REW.ViewingRequestForm('#viewingRequestForm form');
+    new REW.ContactForm('#agentEmailModal form', {
+      onSuccess: function(){ $('#agentEmailModal').modal('hide') }
+    });
+  
+    $('#agentEmailModal').on('shown.bs.modal', function(){
+      $.cloudinary.responsive();
+    })
+    new REW.CallForwarding('[data-forward-agent-call]', {apiUrl: 'https://www.rew.ca/call/setup'});
+  
+    new REW.ElementAffixer('#contactBar .contactbar');
+  
+    new REW.RateSuperMarket('[data-rate-super-market]');
+  
+    // https://developers.facebook.com/docs/sharing/reference/share-dialog
+    $('[data-fb-share]').click(function() {
+      FB.ui({
+        method: 'share',
+        display: 'popup',
+        href: "https://www.rew.ca/properties/R2227563/401-e-55th-avenue-vancouver-bc?utm_campaign=%2Fproperties%2FR2227563%2F401-e-55th-avenue-vancouver-bc&utm_medium=facebook&utm_source=propertyshare",
+        title: "Check out this property that I found on REW.ca. ",
+      },
+      function(response){}
+      );
+    });
+  });
+  </script>
+  <script>
+   $(function(){
+    var offcanvas = new REW.Offcanvas('[data-offcanvas=mainmenu]');
+    $('#loginForm').on('show.bs.modal', function() {
+      offcanvas.hide();
+    });
+  
+    new REW.DropdownFadeIn('.accountnav-dropdown');
+  
+  });
+  </script>
+  <script>
+   $(function(){
+    REW.logged_in = null;
+  })
+  </script>
+  <script>
+   $(function(){
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.type='text/javascript';js.async=true;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    })();
+  })
+  </script>
+ </body>
+</html>
