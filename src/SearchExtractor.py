@@ -5,22 +5,39 @@ import re
 import logging
 logging.basicConfig(level=logging.INFO)
 
+BASE_URL = 'https://www.rew.ca'
+HEADERS = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) '
+                         'Version/7.0.3 Safari/7046A194A'}
+
+class ListingFinder:
+
+    areas = set()
+
+    def __init__(self, *args):
+        [self.add_area(area_listing_url) for area_listing_url in list(args)]
+
+    def add_area(self, area_listing_url):
+        self.areas.add(AreaListing(area_listing_url))
+
+    def update(self):
+        for area in self.areas:
+            area.update()
+
+
 
 class AreaListing:
-    BASE_URL = 'https://www.rew.ca'
-    HEADERS = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) '
-                             'Version/7.0.3 Safari/7046A194A'}
 
-    def __init__(self, area_listing_url):
+    def __init__(self, area_listing_url, update=False):
         self.area_listing_url = area_listing_url
         self.listings = set()
-        self.update()
+        if update:
+            self.update()
 
     def _get_page_soup(self, url):
         # sometimes links are relative, add base when needed
         if not url.startswith('https://'):
-            url = self.BASE_URL + url
-        page = requests.get(url, headers=self.HEADERS)
+            url = BASE_URL + url
+        page = requests.get(url, headers=HEADERS)
         return BeautifulSoup(page.text, 'html5lib')
 
     def update(self):
@@ -47,7 +64,6 @@ class AreaListing:
             for url in subarea_urls:
                 self._crawl_search_results(url)
                 logging.info('Total listings collected: {}'.format(len(self.listings)))
-
 
     def _find_subareas(self):
         subarea_lists = self.soup.find_all('ul', class_='list-unstyled subarealist')
@@ -83,20 +99,36 @@ class AreaListing:
 
 
     def _extract_listings(self, soup):
-        url_extractor = lambda div: 'https://www.rew.ca' + div.find('span', class_='listing-address').find('a')['href']
+        url_extractor = lambda div: div.find('span', class_='listing-address').find('a')['href']
 
         listings = soup.find('div', class_='organiclistings').find_all('div', class_='row listing-row')
         listing_urls = [url_extractor(listing) for listing in listings]
         return listing_urls
 
+    def __hash__(self):
+        return hash(self.__repr__())
 
+    def __eq__(self, other):
+        if isinstance(other, AreaListing):
+            return self.__repr__() == other.__repr__()
 
+    def __repr__(self):
+        area = self.area_listing_url.split('areas/')[-1].upper()
+        return '<ListingArea:{}>'.format(area)
 
 
 
 if __name__ == "__main__":
 
-    url = 'https://www.rew.ca/properties/areas/vancouver-bc'
-    alp = AreaListing(url)
-    alp.listings
+    lf = ListingFinder('https://www.rew.ca/properties/areas/vancouver-bc',
+                       'https://www.rew.ca/properties/areas/richmond-bc',
+                       'https://www.rew.ca/properties/areas/burnaby-bc',
+                       'https://www.rew.ca/properties/areas/new-westminster-bc',
+                       'properties/areas/vancouver-bc')
+
+    print(lf.areas)
+
+    # url = 'https://www.rew.ca/properties/areas/vancouver-bc'
+    # alp = AreaListing(url)
+    # alp.listings
 
