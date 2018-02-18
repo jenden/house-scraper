@@ -1,15 +1,11 @@
 from bs4 import BeautifulSoup
 import requests
 import re
-
+from extractors import get_page_soup
 import logging
 logging.basicConfig(level=logging.INFO)
 
-BASE_URL = 'https://www.rew.ca'
-HEADERS = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) '
-                         'Version/7.0.3 Safari/7046A194A'}
-
-class ListingFinder:
+class Crawler:
 
     areas = set()
 
@@ -17,7 +13,7 @@ class ListingFinder:
         [self.add_area(area_listing_url) for area_listing_url in list(args)]
 
     def add_area(self, area_listing_url):
-        self.areas.add(AreaListing(area_listing_url))
+        self.areas.add(AreaCrawler(area_listing_url))
 
     def update(self):
         for area in self.areas:
@@ -25,7 +21,7 @@ class ListingFinder:
 
 
 
-class AreaListing:
+class AreaCrawler:
 
     def __init__(self, area_listing_url, update=False):
         self.area_listing_url = area_listing_url
@@ -33,15 +29,8 @@ class AreaListing:
         if update:
             self.update()
 
-    def _get_page_soup(self, url):
-        # sometimes links are relative, add base when needed
-        if not url.startswith('https://'):
-            url = BASE_URL + url
-        page = requests.get(url, headers=HEADERS)
-        return BeautifulSoup(page.text, 'html5lib')
-
     def update(self):
-        self.soup = self._get_page_soup(self.area_listing_url)
+        self.soup = get_page_soup(self.area_listing_url)
 
         # REW only lists 25 pages of 20 listings. If there are more than 500 listings then we need to a
         # set of filters we can iterate over and collect listings in each area
@@ -81,7 +70,7 @@ class AreaListing:
 
     def _crawl_search_results(self, url=None):
         if url:
-            soup = self._get_page_soup(url)
+            soup = get_page_soup(url)
         else:
             soup = self.soup
             url = self.area_listing_url
@@ -109,7 +98,7 @@ class AreaListing:
         return hash(self.__repr__())
 
     def __eq__(self, other):
-        if isinstance(other, AreaListing):
+        if isinstance(other, AreaCrawler):
             return self.__repr__() == other.__repr__()
 
     def __repr__(self):
@@ -120,7 +109,7 @@ class AreaListing:
 
 if __name__ == "__main__":
 
-    lf = ListingFinder('https://www.rew.ca/properties/areas/vancouver-bc',
+    lf = Crawler('https://www.rew.ca/properties/areas/vancouver-bc',
                        'https://www.rew.ca/properties/areas/richmond-bc',
                        'https://www.rew.ca/properties/areas/burnaby-bc',
                        'https://www.rew.ca/properties/areas/new-westminster-bc',
