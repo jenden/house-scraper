@@ -1,4 +1,3 @@
-import os
 import re
 import requests
 from bs4 import BeautifulSoup
@@ -22,6 +21,9 @@ def listing_id(soup):
     """Returns the listing id from the html head"""
     import re
     url = soup.head.link['href']
+    return listing_id_from_url(url)
+
+def listing_id_from_url(url):
     return re.findall('(?<=properties/).*(?=/)', url)[0]
 
 def listing_id_mc(mc):
@@ -42,7 +44,10 @@ def postal_code(mc):
 
 def list_price(mc):
     list_price = mc.find('div', class_='propertyheader-price').text.strip()
-    return int(list_price.strip('$').replace(',',''))
+    return price_str_to_int(list_price())
+
+def price_str_to_int(price):
+    return int(price.strip('$').replace(',', ''))
 
 def square_footage(mc):
     summary_bar = mc.find('div', class_='summarybar')
