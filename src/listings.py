@@ -1,10 +1,12 @@
 import extractors
 import logging
 
+
 class Listing:
 
+    @staticmethod
     def factory(url):
-        soup = extractors.get_page_soup(url)
+        soup = extractors.Ladle.get_soup(url)
         type = extractors.property_type(soup)
 
         if 'Apt' in type:
@@ -20,29 +22,30 @@ class Listing:
         else:
             raise AssertionError('Type "{}" not recognized'.format(type))
 
-    factory = staticmethod(factory)
-
-    def parse(self):
 
 class Apartment(Listing):
 
     def __init__(self, soup):
         pass
 
+
 class House(Listing):
 
     def __init__(self, soup):
         pass
+
 
 class Townhouse(Listing):
 
     def __init__(self, soup):
         pass
 
+
 class Nplex(Listing):
 
     def __init__(self, soup):
         pass
+
 
 class Land(Listing):
 
