@@ -1,20 +1,9 @@
 import re
-import os
 import time
 import extractors
 from listings import Listing
+from database import ListingTable, Key
 import logging
-logging.basicConfig(level=logging.INFO)
-
-import boto3
-from boto3.dynamodb.conditions import Key
-
-os.environ['AWS_CONFIG_FILE'] = '../.aws/config'
-os.environ['AWS_SHARED_CREDENTIALS_FILE'] = '../.aws/credentials'
-
-ddb = boto3.resource('dynamodb')
-ListingTable = ddb.Table('listings')
-ExtractTable = ddb.Table('extracts')
 
 class Crawler:
 
@@ -59,14 +48,13 @@ class AreaCrawler:
 
         if num_listings < 500:
             # all listings accessible from this page
-            self._crawl_search_results()
+            self._crawl_search_results(soup=soup)
         else:
             # not all listings accessible from this page
             subarea_urls = self._find_subareas(soup)
 
             for url in subarea_urls:
                 self._crawl_search_results(url)
-                logging.info('Total listings collected: {}'.format(len(self.listings)))
 
     def _find_subareas(self, soup):
         subarea_lists = soup.find_all('ul', class_='list-unstyled subarealist')
@@ -82,15 +70,15 @@ class AreaCrawler:
         return [value for key, value in subarea_urls.items() if re_all.search(key) is None]
 
 
-    def _crawl_search_results(self, url=None):
+    def _crawl_search_results(self, url=None, soup=None):
         if url:
             soup = extractors.Ladle.get_soup(url)
-        else:
-            soup = self.soup
+        elif soup:
             url = self.area_listing_url
+        else:
+            raise AttributeError('You must supply a url or soup')
 
         logging.info('Extracting from {}'.format(url))
-
         self._find_listings(soup)
 
         # crawl the next page if it exists
@@ -114,8 +102,7 @@ class AreaCrawler:
 
         # if no, parse the linked page and add to extracts table
         if response['Count'] == 0:
-            # Listing.factory(url)
-            pass
+            Listing.factory(url)
 
         # add the record to the listings table
         ListingTable.put_item(Item={

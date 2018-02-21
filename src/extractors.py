@@ -2,8 +2,10 @@ import re
 import requests
 from numpy.random import exponential
 import time
-import logging
+from log import logger
 from bs4 import BeautifulSoup
+import json
+from decimal import Decimal
 
 BASE_URL = 'https://www.rew.ca'
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) '
@@ -23,7 +25,7 @@ class Ladle:
      future it may also have the ability to change IP address of the VM in case REW starts blocking requests.
     """
     __last_request = time.time()
-    __random_time = lambda: exponential(2, 1)[0]
+    __random_time = lambda: exponential(1, 1)[0]
 
     @staticmethod
     def get_soup(url):
@@ -31,8 +33,19 @@ class Ladle:
         if Ladle.__last_request + timeout > time.time():
             time.sleep(timeout)
 
-        logging.info('Requested url: {} after {:.1f}s delay'.format(url, timeout))
+        logger.info('Requested url: {} after {:.1f}s delay'.format(url, timeout))
         return get_page_soup(url)
+
+
+def listing_id_from_url(url):
+    return re.findall('(?<=properties/).*(?=/)', url)[0]
+
+
+def listing_id_from_head(soup):
+    """Returns the listing id from the html head"""
+    import re
+    url = soup.head.link['href']
+    return listing_id_from_url(url)
 
 
 def main_content(soup):
@@ -40,88 +53,124 @@ def main_content(soup):
     return soup.find('section', class_='container maincontentspacer')
 
 
-def listing_id(soup):
-    """Returns the listing id from the html head"""
-    import re
-    url = soup.head.link['href']
-    return listing_id_from_url(url)
+# fields contained in the property header
+def property_header(mc):
+    return mc.find('div', class_='propertyheader')
 
 
-def listing_id_from_url(url):
-    return re.findall('(?<=properties/).*(?=/)', url)[0]
+def street_address(ph):
+    return ph.find('span', itemprop='streetAddress').text.strip()
 
 
-def listing_id_mc(mc):
-    """Returns the listing id from the property description"""
-    pass
+def city(ph):
+    return ph.find('span', itemprop='addressLocality').text.strip()
 
 
-def street_address(mc):
-    return mc.find('span', itemprop='streetAddress').text.strip()
+def province(ph):
+    return ph.find('span', itemprop='addressRegion').text.strip()
 
 
-def city(mc):
-    return mc.find('span', itemprop='addressLocality').text.strip()
+def postal_code(ph):
+    return ph.find('span', itemprop='postalCode').text.strip()
 
 
-def province(mc):
-    return mc.find('span', itemprop='addressRegion').text.strip()
+def listing_id_from_property_header(ph):
+    id_string = ph.find('li', string=re.compile('Listing ID')).text
+    return re.compile(r'R\d+').findall(id_string)[0]
 
 
-def postal_code(mc):
-    return mc.find('span', itemprop='postalCode').text.strip()
-
-def list_price(mc):
-    list_price = mc.find('div', class_='propertyheader-price').text.strip()
-    return price_str_to_int(list_price())
+def list_price(ph):
+    price = ph.find('div', class_='propertyheader-price').text.strip()
+    return price_str_to_int(price)
 
 
 def price_str_to_int(price):
     return int(price.strip('$').replace(',', ''))
 
 
-def square_footage(mc):
-    summary_bar = mc.find('div', class_='summarybar')
-    sqft_span = summary_bar.find(string=re.compile('Sqft')).findParent().text
-    return int(re.findall(r'\d+', sqft_span)[0])
+# fields contained in the summary bar
+def summary_bar(mc):
+    return mc.find('div', class_='summarybar')
 
 
-def beds(mc):
-    summary_bar = mc.find('div', class_='summarybar')
-    beds_span = summary_bar.find(string=re.compile('Bed')).findParent().text
+def beds(sb):
+    beds_span = sb.find(string=re.compile('Bed')).findParent().text
     return int(re.findall(r'\d+', beds_span)[0])
 
 
-def baths(mc):
-    summary_bar = mc.find('div', class_='summarybar')
-    baths_span = summary_bar.find(string=re.compile('Bath')).findParent().text
+def baths(sb):
+    baths_span = sb.find(string=re.compile('Bath')).findParent().text
     return int(re.findall(r'\d+', baths_span)[0])
 
 
+def square_footage(sb):
+    sqft_span = sb.find(string=re.compile('Sqft')).findParent().text
+    return int(re.findall(r'\d+', sqft_span)[0])
+
+
+def property_type_from_summary_bar(sb):
+    span = sb.find('div', string=re.compile('Type')).findParent()
+    return span.text.replace('Type', '').strip()
+
+
+# property description
 def description(mc):
-    return mc.find('div', itemprop='description').text.strip()
+    div = mc.find('div', itemprop='description')
+    return div.text.strip()
 
 
-def features_list(mc):
-    feature_table = soup.find('caption', string=re.compile('Special'))
-    return feature_table.findNext('th').findNext('td').text.strip()
-
-
-def property_type(mc):
+# other sections
+def property_type_from_table(mc):
     row = mc.find('th', string=re.compile('Property Type'))
     return row.parent.find('td').text.strip()
 
 
-def property_overview(mc):
+def property_overview_table(mc):
     """Dumps the property overview table to a dictionary"""
-    property_overview = soup.find('caption', string=re.compile('Property Overview')).findParent()
-    property_overview_dict = {}
-    for row in property_overview.find_all("tr"):
+    table = mc.find('caption', string=re.compile('Property Overview')).findParent()
+    return html_table_to_dict(table)
+
+
+def features_table(mc):
+    table = mc.find('caption', string=re.compile('Special')).findParent()
+    if table is not None:
+        return html_table_to_dict(table)
+
+
+def building_information(mc):
+    div = mc.find('div', class_='buildingoverview')
+    building = {}
+    building['name'] = div.header.a.text.strip()
+    building['description'] = div.find('div', class_='buildingoverview-description').text
+    table = div.find('div', class_='buildingoverview-table')
+    for item in table.find_all('dl', class_='buildingoverview-attributes'):
+        key = item.find('dt').text.replace(':', '').strip()
+        value = item.find('dd').text.strip()
+        building[key] = value
+    return building
+
+
+def nearby_schools(mc):
+    school_list = mc.find('div', class_='detailslist', id='nearbySchools')
+    schools = []
+    for school_row in school_list.find_all('div', class_='detailslist-row'):
+        schools.append(school_details(school_row))
+    return schools
+
+
+def school_details(school_row):
+    a = school_row.find('div', class_='detailslist-row_cap').find('a')
+    return json.loads(a['data-popup-map-marker-school'], parse_float=Decimal)
+
+
+def html_table_to_dict(table_soup):
+    table_dict = {}
+    for row in table_soup.find_all("tr"):
         key = row.find('th').text.strip()
         val = row.find('td').text.strip()
-        property_overview_dict[key] = val
-
-    return property_overview_dict
+        if key != '' and val != '':
+            table_dict[key] = val
+    return table_dict
 
 
 if __name__ == "__main__":
@@ -134,7 +183,7 @@ if __name__ == "__main__":
         page = fp.read()
     soup = BeautifulSoup(page, 'html5lib')
 
-    param = property_type(soup)
+    param = property_type_from_table(soup)
     print('Condo' in param)
 
 
