@@ -2,3 +2,4 @@
 .idea/
 /.aws
 /src/__pycache__
+/logs
