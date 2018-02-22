@@ -6,6 +6,7 @@ from log import logger
 from bs4 import BeautifulSoup
 import json
 from decimal import Decimal
+import gzip
 
 BASE_URL = 'https://www.rew.ca'
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) '
@@ -178,6 +179,13 @@ def html_table_to_dict(table_soup):
     return table_dict
 
 
+def compress_html(soup):
+    return {'format': 'gzip',
+            'compression_level': 9,
+            'format': 'binary',
+            'data': gzip.compress(bytes(soup.prettify(), 'utf-8'), compresslevel=9)}
+
+
 if __name__ == "__main__":
 
     # save target to local file so it doesn't change on us.
@@ -187,8 +195,16 @@ if __name__ == "__main__":
     with open(fpath, 'r') as fp:
         page = fp.read()
     soup = BeautifulSoup(page, 'html5lib')
+    mc = main_content(soup)
+    gz = compress_html(mc)
+    import sys
+    print(sys.getsizeof(mc.prettify()))
+    print(sys.getsizeof(gz))
 
-    param = property_type_from_table(soup)
-    print('Condo' in param)
+    html = gzip.decompress(gz['data'])
+    print(html)
+
+
+
 
 

@@ -78,6 +78,8 @@ class Listing:
         self.extract(extractors.features_table, mc, 'FeatureTable')
         self.extract(extractors.nearby_schools, mc, 'NearbySchools')
 
+        self.details['CompressedHTML'] = extractors.compress_html(mc)
+
     def write_to_db(self):
         # print(self.details)
         ExtractTable.put_item(Item=self.details)
