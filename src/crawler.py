@@ -1,5 +1,6 @@
 import re
 from datetime import datetime
+from dateutil import parser as datetime_parser
 import extractors
 from listings import Listing
 from database import ListingTable, Key
@@ -100,13 +101,18 @@ class AreaCrawler:
         # if no, parse the linked page and add to extracts table
         if response['Count'] == 0:
             Listing.factory(url)
-
-        # add the record to the listings table - allows tracking price changes and time on the market
-        ListingTable.put_item(Item={
-            'ListingID': listing_id,
-            'DateTime': datetime.now().isoformat(),
-            'Price': price,
-            'URL': url})
+        else: # only save the record if it was recorded on another day
+            record_datetime = datetime_parser.parse(response['Items'][-1]['DateTime'])
+            record_date = datetime.date(record_datetime)
+            if record_date == datetime.date(datetime.now()):
+                logger.info('Already parsed {} on {}'.format(listing_id, record_date))
+            else:
+                # add the record to the listings table - allows tracking price changes and time on the market
+                ListingTable.put_item(Item={
+                    'ListingID': listing_id,
+                    'DateTime': datetime.now().isoformat(),
+                    'Price': price,
+                    'URL': url})
 
     def __hash__(self):
         return hash(self.__repr__())

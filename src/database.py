@@ -12,13 +12,21 @@ ExtractTable = ddb.Table('extracts')
 
 if __name__ == "__main__":
 
-    response = ExtractTable.query(KeyConditionExpression=Key('ListingID').eq('R2241950'))
-    print(response)
-    item = response['Item']
-    print(item)
+    # response = ExtractTable.get_item(Key={'ListingID':'R2233392'})
+    # print(response)
+    # item = response['Item']
+    # print(item)
 
     # import gzip
     # data = response['Items'][0]['original_page']['data']
     # # data is a Binary type object with a wrapper
     # print(type(data.value))
     # print(gzip.decompress(data.value))
+
+    import dateutil
+    from datetime import datetime
+    response = ListingTable.query(KeyConditionExpression=Key('ListingID').eq('R2233392'))
+    print(response)
+    if response['Count'] > 0:
+        record_datetime = dateutil.parser.parse(response['Items'][-1]['DateTime'])
+        print(datetime.date(record_datetime) == datetime.date(datetime.now()))
