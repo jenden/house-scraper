@@ -1,9 +1,10 @@
 import re
-import time
+from datetime import datetime
 import extractors
 from listings import Listing
 from database import ListingTable, Key
-import logging
+from log import logger
+
 
 class Crawler:
 
@@ -17,6 +18,7 @@ class Crawler:
 
     def update(self):
         for area in self.areas:
+            logger.info('Scraping {}'.format(area))
             area.update()
 
 
@@ -39,12 +41,8 @@ class AreaCrawler:
             matches = re.findall(r'(?<=of )\d+', pagination_string)
             num_listings = int(matches[0])
         except:
-            logging.error('Number of results not found in pagination string: {}'.format(pagination_string))
+            logger.error('Number of results not found in pagination string: {}'.format(pagination_string))
             num_listings = 0
-
-        # pull the nicely formatted area name
-        bread_crumbs = soup.find('div', class_='breadcrumbbar').find_all('li', itemprop='itemListElement')
-        self.area = bread_crumbs[-1].find('span', itemprop='name').text.strip()
 
         if num_listings < 500:
             # all listings accessible from this page
@@ -78,7 +76,7 @@ class AreaCrawler:
         else:
             raise AttributeError('You must supply a url or soup')
 
-        logging.info('Extracting from {}'.format(url))
+        logger.info('Extracting from {}'.format(url))
         self._find_listings(soup)
 
         # crawl the next page if it exists
@@ -93,24 +91,22 @@ class AreaCrawler:
 
     def _process_listing(self, listing):
         url = listing.find('span', class_='listing-address').find('a')['href']
-        id = extractors.listing_id_from_url(url)
+        listing_id = extractors.listing_id_from_url(url)
         price = extractors.price_str_to_int(listing.find('div', class_='listing-price').text)
-        subarea = listing.find('ul', class_='hidden-xs listing-subheading').find('li').text
 
         # check if data exists in table
-        response = ListingTable.query(KeyConditionExpression=Key('ListingID').eq(id))
+        response = ListingTable.query(KeyConditionExpression=Key('ListingID').eq(listing_id))
 
         # if no, parse the linked page and add to extracts table
         if response['Count'] == 0:
             Listing.factory(url)
 
-        # add the record to the listings table
+        # add the record to the listings table - allows tracking price changes and time on the market
         ListingTable.put_item(Item={
-            'ListingID': id,
-            'DateTime': time.ctime(),
-            'Area': self.area,
-            'Subarea': subarea,
-            'Price': price})
+            'ListingID': listing_id,
+            'DateTime': datetime.now().isoformat(),
+            'Price': price,
+            'URL': url})
 
     def __hash__(self):
         return hash(self.__repr__())
@@ -123,20 +119,14 @@ class AreaCrawler:
         return '<ListingArea:{}>'.format(self.area)
 
 
-
 if __name__ == "__main__":
 
-    lf = Crawler('https://www.rew.ca/properties/areas/vancouver-bc',
-                       'https://www.rew.ca/properties/areas/richmond-bc',
-                       'https://www.rew.ca/properties/areas/burnaby-bc',
-                       'https://www.rew.ca/properties/areas/new-westminster-bc',
-                       'properties/areas/vancouver-bc')
+    c = Crawler('https://www.rew.ca/properties/areas/vancouver-bc') #,
+                 # 'https://www.rew.ca/properties/areas/richmond-bc',
+                 # 'https://www.rew.ca/properties/areas/burnaby-bc',
+                 # 'https://www.rew.ca/properties/areas/new-westminster-bc',
+                 # 'https://www.rew.ca/properties/areas/west-vancouver-bc',
+                 # 'https://www.rew.ca/properties/areas/north-vancouver-bc')
+    c.update()
 
-    print(lf.areas)
-    lf.update()
-
-    # url = 'https://www.rew.ca/properties/areas/vancouver-bc'
-    # alp = AreaCrawler(url)
-    # alp.update()
-    # alp.listings
 

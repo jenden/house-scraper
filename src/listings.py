@@ -2,7 +2,8 @@ import extractors
 from log import logger
 from collections import OrderedDict
 from database import ExtractTable
-import time
+from datetime import datetime
+
 
 class Listing:
 
@@ -37,13 +38,13 @@ class Listing:
     def extract(self, extractor_function, soup, field_name=None):
         try:
             extract = extractor_function(soup)
-        except (ValueError, AttributeError):
+        except (ValueError, AttributeError) as e:
             if soup is not None:
                 html = soup.prettify().replace('\n', '')
-                message = '{} not found in soup: {}'.format(extractor_function.__name__, html)
+                message = '{} not found in soup.'.format(extractor_function.__name__)
             else:
-                message = 'None passed instead of soup. Check the previous extractor'
-            logger.error('Listing {}: '.format(self.id) + message)
+                message = 'No soup provided to {}. Check the previous extractor.'.format(extractor_function.__name__)
+            logger.error('Listing {}, Error: {}. '.format(self.id, str(e)) + message)
             return
 
         if extract is None or extract == "":
@@ -55,7 +56,7 @@ class Listing:
 
     def parse(self):
         self.details['ListingID'] = self.id
-        self.details['ExtractTime'] = time.ctime()
+        self.details['ExtractTime'] = datetime.now().isoformat()
 
         mc = self.extract(extractors.main_content, self.soup)
 

@@ -11,13 +11,7 @@ import gzip
 BASE_URL = 'https://www.rew.ca'
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) '
                          'Version/7.0.3 Safari/7046A194A'}
-
-def get_page_soup(url):
-    # sometimes links are relative, add base when needed
-    if not url.startswith('https://'):
-        url = BASE_URL + url
-    page = requests.get(url, headers=HEADERS)
-    return BeautifulSoup(page.text, 'html5lib')
+EXTRACT_RATE = 15  # seconds per page
 
 
 class Ladle:
@@ -26,17 +20,21 @@ class Ladle:
      future it may also have the ability to change IP address of the VM in case REW starts blocking requests.
     """
     __last_request = time.time()
-    __random_time = lambda: exponential(1, 1)[0]
+    __random_time = lambda: exponential(EXTRACT_RATE, 1)[0]
 
     @staticmethod
     def get_soup(url):
+        if not url.startswith('https://'):
+            url = BASE_URL + url
+
         timeout = Ladle.__random_time()
         if Ladle.__last_request + timeout > time.time():
+            logger.info('Waiting {:.1f}s before requesting {}'.format(timeout, url))
             time.sleep(timeout)
 
-        logger.info('Requested url: {} after {:.1f}s delay'.format(url, timeout))
-        return get_page_soup(url)
-
+        Ladle.__last_request = time.time()
+        page = requests.get(url, headers=HEADERS)
+        return BeautifulSoup(page.text, 'html5lib')
 
 def listing_id_from_url(url):
     return re.findall('(?<=properties/).*(?=/)', url)[0]
@@ -166,7 +164,9 @@ def nearby_schools(mc):
 
 def school_details(school_row):
     a = school_row.find('div', class_='detailslist-row_cap').find('a')
-    return json.loads(a['data-popup-map-marker-school'], parse_float=Decimal)
+    d = json.loads(a['data-popup-map-marker-school'], parse_float=Decimal)
+    d['distance'] = a.text.strip()
+    return d
 
 
 def html_table_to_dict(table_soup):
