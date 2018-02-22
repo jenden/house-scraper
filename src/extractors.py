@@ -127,18 +127,21 @@ def property_type_from_table(mc):
 
 def property_overview_table(mc):
     """Dumps the property overview table to a dictionary"""
-    table = mc.find('caption', string=re.compile('Property Overview')).findParent()
-    return html_table_to_dict(table)
+    table = mc.find('caption', string=re.compile('Property Overview'))
+    if table is not None:
+        return html_table_to_dict(table.findParent())
 
 
 def features_table(mc):
-    table = mc.find('caption', string=re.compile('Special')).findParent()
+    table = mc.find('caption', string=re.compile('Special'))
     if table is not None:
-        return html_table_to_dict(table)
+        return html_table_to_dict(table.findParent())
 
 
 def building_information(mc):
     div = mc.find('div', class_='buildingoverview')
+    if div is None:
+        return
     building = {}
     building['name'] = div.header.a.text.strip()
     building['description'] = div.find('div', class_='buildingoverview-description').text
@@ -152,6 +155,8 @@ def building_information(mc):
 
 def nearby_schools(mc):
     school_list = mc.find('div', class_='detailslist', id='nearbySchools')
+    if school_list is None:
+        return
     schools = []
     for school_row in school_list.find_all('div', class_='detailslist-row'):
         schools.append(school_details(school_row))
