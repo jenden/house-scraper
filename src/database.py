@@ -2,8 +2,10 @@ import boto3
 from boto3.dynamodb.conditions import Key, Attr
 import os
 
-os.environ['AWS_CONFIG_FILE'] = '../.aws/config'
-os.environ['AWS_SHARED_CREDENTIALS_FILE'] = '../.aws/credentials'
+AWS_DIR = os.path.join(os.path.dirname(__file__), '../.aws/')
+
+os.environ['AWS_CONFIG_FILE'] = os.path.join(AWS_DIR, 'config')
+os.environ['AWS_SHARED_CREDENTIALS_FILE'] = os.path.join(AWS_DIR, 'credentials')
 
 ddb = boto3.resource('dynamodb')
 ListingTable = ddb.Table('listings')
