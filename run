@@ -1,0 +1,11 @@
+#!/bin/bash
+# Runs a single pass of the houseScraper app to collect a snapshot of listings.
+
+CONDA_ENV=houseScraper
+
+echo  "Running houseScraper"
+cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+/home/ubuntu/miniconda3/bin/activate $CONDA_ENV
+/home/ubuntu/miniconda3/envs/houseScraper/bin/python src/crawler.py
+/home/ubuntu/miniconda3/bin/deactivate
+
