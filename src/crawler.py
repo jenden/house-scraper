@@ -127,12 +127,12 @@ class AreaCrawler:
 
 if __name__ == "__main__":
 
-    c = Crawler('https://www.rew.ca/properties/areas/vancouver-bc') #,
-                 # 'https://www.rew.ca/properties/areas/richmond-bc',
-                 # 'https://www.rew.ca/properties/areas/burnaby-bc',
-                 # 'https://www.rew.ca/properties/areas/new-westminster-bc',
-                 # 'https://www.rew.ca/properties/areas/west-vancouver-bc',
-                 # 'https://www.rew.ca/properties/areas/north-vancouver-bc')
+    c = Crawler('https://www.rew.ca/properties/areas/vancouver-bc',
+                 'https://www.rew.ca/properties/areas/richmond-bc',
+                 'https://www.rew.ca/properties/areas/burnaby-bc',
+                 'https://www.rew.ca/properties/areas/new-westminster-bc',
+                 'https://www.rew.ca/properties/areas/west-vancouver-bc',
+                 'https://www.rew.ca/properties/areas/north-vancouver-bc')
     c.update()
 
 
