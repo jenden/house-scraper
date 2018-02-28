@@ -101,18 +101,19 @@ class AreaCrawler:
         # if no, parse the linked page and add to extracts table
         if response['Count'] == 0:
             Listing.factory(url)
-        # only save the record metadata if it was recorded on another day
-        if response['Count'] > 0:
+        else: # only save the record metadata if it was recorded on another day
             record_datetime = datetime_parser.parse(response['Items'][-1]['DateTime'])
             record_date = datetime.date(record_datetime)
             if record_date == datetime.date(datetime.now()):
                 logger.info('Already parsed {} on {}'.format(listing_id, record_date))
-        else: # first time record, add the record to the listings table - allows tracking price changes and time on the market
-            ListingTable.put_item(Item={
-                'ListingID': listing_id,
-                'DateTime': datetime.now().isoformat(),
-                'Price': price,
-                'URL': url})
+                return
+        
+        # add the record to the listings table - allows tracking price changes and time on the market
+        ListingTable.put_item(Item={
+            'ListingID': listing_id,
+            'DateTime': datetime.now().isoformat(),
+            'Price': price,
+            'URL': url})
 
     def __hash__(self):
         return hash(self.__repr__())
