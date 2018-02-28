@@ -11,7 +11,7 @@ import gzip
 BASE_URL = 'https://www.rew.ca'
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) '
                          'Version/7.0.3 Safari/7046A194A'}
-EXTRACT_RATE = 15  # seconds per page
+EXTRACT_RATE = 5  # seconds per page
 
 
 class Ladle:
