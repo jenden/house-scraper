@@ -8,7 +8,7 @@ class ExtractorTests(unittest.TestCase):
     def setUp(self):
 
         # load page from file
-        fpath = '../../examples/R2227563.html'
+        fpath = '../examples/R2227563.html'
         with open(fpath, 'r') as fp:
             page = fp.read()
 
