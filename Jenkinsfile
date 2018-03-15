@@ -1,10 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('Run unit tests') {
       steps {
-        sh '''cd src
-python -m unittest'''
+        sh '''source activate houseScraper
+cd src
+python -m unittest
+source deactivate'''
       }
     }
   }
