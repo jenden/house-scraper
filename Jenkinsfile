@@ -3,10 +3,10 @@ pipeline {
   stages {
     stage('Run unit tests') {
       steps {
-        sh '''source activate houseScraper
+        sh '''/home/ubuntu/miniconda3/bin/activate houseScraper
 cd src
 python -m unittest
-source deactivate'''
+/home/ubuntu/miniconda3/bin/deactivate'''
       }
     }
   }
